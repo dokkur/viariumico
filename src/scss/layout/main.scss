@@ -121,7 +121,7 @@ body {
 .via-timeBox {
   display: block;
   position: relative;
-  width: 465px;
+  width: 446px;
   margin: 0 auto;
   background-color: rgba(41, 36, 82, 0.75);
 
@@ -136,6 +136,7 @@ body {
 
     &-item {
       display: inline-block;
+      width: 102px;
 
       &-value {
         display: block;
@@ -145,7 +146,6 @@ body {
         font-size: 65px;
         line-height: 65px;
         margin-top: 16px;
-        padding-right: 40px;
 
         &:after {
           display: block;
@@ -155,7 +155,7 @@ body {
           right: 0;
           font-size: 61px;
           font-weight: 600;
-          margin-right: 15px;
+          margin-right: 3px;
         }
       }
 
@@ -167,6 +167,7 @@ body {
         line-height: 18px;
         color: #fff;
         text-align: left;
+        padding-left: 20px;
       }
 
       &:last-of-type {
@@ -185,7 +186,7 @@ body {
 .via-feedbackBlock {
   display: block;
   position: relative;
-  width: 465px;
+  width: 446px;
   height: 53px;
   margin: 0 auto;
 
@@ -220,13 +221,13 @@ body {
       display: block;
       float: right;
       height: 100%;
-      width: 195px;
+      width: 176px;
       background-color: #ff1329;
       border: 0;
       text-transform: uppercase;
       font-weight: 400;
       font-size: 19px;
-      letter-spacing: -0.13px;
+      letter-spacing: -0.6px;
       color: #fff;
       outline: none;
       border: none;
