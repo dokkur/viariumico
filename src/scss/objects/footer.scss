@@ -1,0 +1,57 @@
+.via-footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  background: url(/assets/images/footerBg.jpg) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+
+  &-wrapper {
+    margin-top: 9px;
+
+    &-logo {
+      position: relative;
+      float: left;
+      width: 99px;
+      padding: 20px 0 25px 0;
+
+      & a {
+        display: block;
+
+        & img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &-contuctUs {
+      position: relative;
+      float: right;
+      padding-top: 33px;
+
+      &-span {
+        position: relative;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+
+        & a {
+          color: #fff;
+          font-size: 24px;
+          font-weight: 500;
+          text-decoration: none;
+        }
+      }
+
+      & .via-social {
+        height: 34px;
+        margin-top: 8px;
+
+        & a {
+          margin: 0 12px;
+        }
+      }
+    }
+  }
+}

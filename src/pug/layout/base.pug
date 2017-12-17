@@ -1,21 +1,20 @@
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     block page-title
-      title Title
+      title Viarium
     include ../base/head
 
   block vars
     - var bodyClasses = '';
 
   body(class=bodyClasses)
-    .page
+    .via-page
       include ../objects/header
-      .content
+      .via-content
         block page-content
 
       include ../objects/footer
-    include ../base/cellar
 
 
 

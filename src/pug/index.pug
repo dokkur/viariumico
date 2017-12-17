@@ -1,11 +1,79 @@
 extends layout/base
 
 block page-title
-  title Title
+  title Viarium
 
 block page-content
-  main.main-content
+  .via-page-header
+    span.via-page-header-startTime Начало пресейла 20 января 2018 в 16:00 GTM
+    .via-timeBox
+      ul.via-timeBox-timeTable
+        li.via-timeBox-timeTable-item
+          span#days.via-timeBox-timeTable-item-value 14
+          span.via-timeBox-timeTable-item-subValue дней
+        li.via-timeBox-timeTable-item
+          span#hours.via-timeBox-timeTable-item-value 21
+          span.via-timeBox-timeTable-item-subValue часов
+        li.via-timeBox-timeTable-item
+          span#minutes.via-timeBox-timeTable-item-value 07
+          span.via-timeBox-timeTable-item-subValue минут
+        li.via-timeBox-timeTable-item
+          span#seconds.via-timeBox-timeTable-item-value 11
+          span.via-timeBox-timeTable-item-subValue секунд
+    .via-feedbackBlock
+      form#feedbackForm.via-feedbackBlock-form
+        .via-feedbackBlock-feedbackLine
+          input#email.via-feedbackBlock-feedbackLine-input(type="email" name="email" placeholder="Введите ваш E-mail адрес")
+          button.via-feedbackBlock-feedbackLine-btn(type="submit") Подписаться
+  
+  .via-page-about
     .container
-      .main-content__inner
-
+      h1 О проекте
+      p Viarium – это уникальная платформа, объединяющая в себе сеть виртуального пространства и дополненной реальности для продажи товаров и услуг. С помощью Viarium становится возможность реализации своих товаров и услуг. Совершайте покупки в торговых центрах и шоурумах VR, делитесь новыми возможностями с друзьями, семьей и всем миром, получая при этом доход на торговой площадке нового поколения Viarium!
+  
+  .via-page-advantages
+    .container
+      h1 Наши преимущества
+      .row
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv1.png")
+            p Единая инфраструктура в VR для бизнеса и развлечений
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv2.png")
+            p Никаких рисков при работе с нами
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv3.png")
+            p Децентрализованная устойчивая система
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv4.png")
+            p Можно подключить свой сервер
+        .clear
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv5.png")
+            p Открытый Мир
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv6.png")
+            p Единая инфраструктура в VR для бизнеса и развлечений
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv7.png")
+            p Гарантированная защищенность бизнеса за счет блокчейна
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv8.png")
+            p Мир неограниченно растет
 

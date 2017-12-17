@@ -1,4 +1,24 @@
-header.header
-  .container
-    .header__content
-      include nav
+header.via-header
+  .via-header-wrapper
+    .clearfix
+      .container
+        .via-header-wrapper-logo
+          a(href="/")
+            img(src="/assets/images/logo.png")
+        .via-header-wrapper-rightSide
+          .via-header-wrapper-menu
+            include nav
+            .via-languageSelector
+              ul.via-languageSelector-btn
+                li.via-languageSelector-lang
+                  span.via-languageSelector-lang-selectedLang RU
+                  .via-languageSelector-lang-langPanel
+                    ul.via-languageSelector-lang-langPanel-inner
+                      li.via-languageSelector-lang-langPanel-inner-item
+                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/ru" rel="nofollow") RU
+                      li.via-languageSelector-lang-langPanel-inner-item
+                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/ru" rel="nofollow") EN
+            .clear
+          .clear
+          include social
+        .clear
