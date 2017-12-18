@@ -3,24 +3,27 @@ window.$ = $;
 window.Popper = require('popper.js').default;
 require('bootstrap');
 import bootbox from "bootbox";
+import moment from "moment";
 import countdown from "jquery-countdown";
 
 $(document).ready(function(){
 
   /* count down */
-    $('#days').countdown('2018/01/20 16:00', function(event) {
+    var endTime = "2018-01-20T16:00:00+00:00";
+    var formattedEndTime = moment(new Date(endTime)).format('YYYY/MM/DD HH:mm');
+    $('#days').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%d'));
     });
 
-    $('#hours').countdown('2018/01/20 16:00', function(event) {
+    $('#hours').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%H'));
     });
 
-    $('#minutes').countdown('2018/01/20 16:00', function(event) {
+    $('#minutes').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%M'));
     });
 
-    $('#seconds').countdown('2018/01/20 16:00', function(event) {
+    $('#seconds').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%S'));
     });
   /**/
