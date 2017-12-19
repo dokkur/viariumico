@@ -5,8 +5,12 @@ block page-title
 
 block page-content
   .via-page-header
-    span.via-page-header-startTime Начало пресейла 20 января 2018 в 16:00 GTM
-    .via-timeBox
+    span.via-page-header-title THE FIRST VR PLATFORM FOR BUSINESS ON BLOCKCHAIN
+    .via-btnWrap
+      button#buyToken.via-btn Buy token
+      button#getWP.via-btn.-fullColor Get WP
+    //span.via-page-header-startTime Начало пресейла 20 января 2018 в 16:00 GTM
+    //.via-timeBox
       ul.via-timeBox-timeTable
         li.via-timeBox-timeTable-item
           span#days.via-timeBox-timeTable-item-value 14
@@ -20,16 +24,56 @@ block page-content
         li.via-timeBox-timeTable-item
           span#seconds.via-timeBox-timeTable-item-value 11
           span.via-timeBox-timeTable-item-subValue секунд
-    .via-feedbackBlock
+    //.via-feedbackBlock
       form#feedbackForm.via-feedbackBlock-form
         .via-feedbackBlock-feedbackLine
           input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес")
           button.via-feedbackBlock-feedbackLine-btn(type="submit") Подписаться
   
+  .via-page-aboutToken
+    .container
+      h1 ИНФОРМАЦИЯ О ТОКЕНЕ
+      .row
+        .col-md-6
+          table
+            tr
+              td Тип токена:
+              td Utility token
+            tr
+              td Символ:
+              td VRM
+            tr
+              td Поставка:
+              td 510 000 000
+            tr
+              td На продажу:
+              td 300 000 000
+            tr
+              td Цена:
+              td 1ETH = 5000 VRM
+            tr
+              td Минимальная цель:
+              td 5 000 000 $
+            tr
+              td Максимальная цель:
+              td 24 000 000 $
+        .col-md-6
+          .via-whitePaper
+            form.via-whitePaper-form(method="get" action="whitePaper.doc")
+              span.via-whitePaper-link(href="path_to_file" download="whitePaper.doc") White Paper
+                i.via-whitePaper-icon
+              button.via-btn.-fullColor CКАЧАТЬ ДОКУМЕНТ
+
+
   .via-page-about
     .container
       h1 О проекте
       p Viarium – это уникальная платформа, объединяющая в себе сеть виртуального пространства и дополненной реальности для продажи товаров и услуг. С помощью Viarium становится возможность реализации своих товаров и услуг. Совершайте покупки в торговых центрах и шоурумах VR, делитесь новыми возможностями с друзьями, семьей и всем миром, получая при этом доход на торговой площадке нового поколения Viarium!
+      .via-feedbackBlock
+        form#feedbackForm.via-feedbackBlock-form
+          .via-feedbackBlock-feedbackLine
+            input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес")
+            button.via-btn.-fullColor(type="submit") Get WP
   
   .via-page-advantages
     .container

@@ -11,14 +11,14 @@ header.via-header
             .via-languageSelector
               ul.via-languageSelector-btn
                 li.via-languageSelector-lang
-                  span.via-languageSelector-lang-selectedLang RU
-                  .via-languageSelector-lang-langPanel
+                  span#langBtn.via-languageSelector-lang-selectedLang(data-lang="ru") RU
+                  #langPanel.via-languageSelector-lang-langPanel
                     ul.via-languageSelector-lang-langPanel-inner
-                      li.via-languageSelector-lang-langPanel-inner-item
+                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="en")
+                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/en" rel="nofollow") EN
+                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="ru")
                         a.via-languageSelector-lang-langPanel-inner-item-link(href="/ru" rel="nofollow") RU
-                      li.via-languageSelector-lang-langPanel-inner-item
-                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/ru" rel="nofollow") EN
             .clear
           .clear
-          include social
+          //include social
         .clear
