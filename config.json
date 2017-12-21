@@ -1,0 +1,20 @@
+{
+    "locale": "ru",
+    "translations": {
+        "ru": {
+            "typeEmail": "Введите ваш E-mail адрес",
+            "buyTokenPopUpText": "<p>Подпишите до 18 декабря и <span> получите 100 VRM </ span> Токены бесплатно!</p>",
+            "getWpPopUpText": "<p>Для получения White paper введите свой email</p>"
+        },
+        "en": {
+            "typeEmail": "please enter your e-mail",
+            "buyTokenPopUpText": "<p>Sign up before December 18th and <span>get 100 VRM</span> Tokens free!</p>",
+            "getWpPopUpText": "<p>To get White paper, please, enter your email</p>"
+        },
+        "jpn": {
+            "typeEmail": "あなたの電子メールを入力します",
+            "buyTokenPopUpText": "<p>12月18日までにサインアップし、<span> 100 VRM </ span>トークンを無料で入手！</p>",
+            "getWpPopUpText": "<p>ホワイト新聞をとるために、どうぞ、あなたの電子メールを入力してください</p>"
+        }
+    }
+}

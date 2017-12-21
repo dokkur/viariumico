@@ -5,14 +5,25 @@ require('bootstrap');
 import bootbox from "bootbox";
 import moment from "moment";
 import countdown from "jquery-countdown";
+import config from "../../config.json";
 
 $(document).ready(function(){
-  
-  var langFromUrl = window.location.pathname.replace(/\//g,'');
-  if (langFromUrl) {
-    $('#langBtn').data('lang', langFromUrl);
-    $('#langBtn').text(langFromUrl.toUpperCase());
-  }
+
+  /* actual language */
+    var langFromUrl = window.location.pathname.replace(/\//g,'');
+    if (langFromUrl) {
+      $('#langBtn').data('lang', langFromUrl);
+      $('#langBtn').text(langFromUrl.toUpperCase());
+    }
+  /**/
+
+  /* language vars */
+    var langVariables = config.translations[langFromUrl];
+    Object.keys(langVariables).forEach(function(langVariable) {
+      $('[data-bind="' + langVariable + '"]').html(langVariables[langVariable]);
+      $('[data-bindPlaceholder="' + langVariable + '"]').attr("placeholder", langVariables[langVariable]);
+    });
+  /**/
 
   /* language selector */
     $('#langBtn').click(function(event) {
@@ -63,7 +74,7 @@ $(document).ready(function(){
       var email = $(event.target).find("#email").val();
       if (!email) {
         bootbox.alert({
-          title: "Введите ваш E-mail адрес",
+          title: langVariables.typeEmail,
           message: "<p>Похоже вы забыли ввести ваш E-mail адрес ...</p>",
           backdrop: true,
           callback: function(){ 
@@ -104,7 +115,7 @@ $(document).ready(function(){
 
   /* modals */
     /* Buy token */
-      $('#buyToken').click(function(event) {
+      $('.buyToken').click(function(event) {
           var buyTokenPopUp = bootbox.dialog({
             title: 'INVEST VIARIUM',
             message: '<p></p>',
@@ -119,7 +130,7 @@ $(document).ready(function(){
               var email = $(event.target).find(".via-form-input").val();
               if (!email) {
                 bootbox.alert({
-                  title: "Введите ваш E-mail адрес",
+                  title: langVariables.typeEmail,
                   message: "Похоже вы забыли ввести ваш E-mail адрес ...",
                   backdrop: true,
                   callback: function(){ 
@@ -161,7 +172,7 @@ $(document).ready(function(){
     /**/
 
     /* Get WP */
-      $('#getWP').click(function(event) {
+      $('.getWP').click(function(event) {
           var getWpPopUp = bootbox.dialog({
             title: 'INVEST VIARIUM',
             message: '<p></p>',
@@ -176,7 +187,7 @@ $(document).ready(function(){
               var email = $(event.target).find(".via-form-input").val();
               if (!email) {
                 bootbox.alert({
-                  title: "Введите ваш E-mail адрес",
+                  title: langVariables.typeEmail,
                   message: "Похоже вы забыли ввести ваш E-mail адрес ...",
                   backdrop: true,
                   callback: function(){ 

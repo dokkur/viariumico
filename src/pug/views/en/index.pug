@@ -7,8 +7,8 @@ block page-content
   .via-page-header
     span.via-page-header-title THE FIRST VR PLATFORM FOR BUSINESS ON BLOCKCHAIN
     .via-btnWrap
-      button#buyToken.via-btn Buy token
-      button#getWP.via-btn.-fullColor Get WP
+      button.buyToken.via-btn Buy token
+      button.getWP.via-btn.-fullColor Get WP
     //span.via-page-header-startTime Начало пресейла 20 января 2018 в 16:00 GTM
     //.via-timeBox
       ul.via-timeBox-timeTable
@@ -60,10 +60,10 @@ block page-content
               td 24 000 000 $
         .col-md-6
           .via-whitePaper
-            form.via-whitePaper-form(method="get" action="whitePaper.doc")
-              span.via-whitePaper-link(href="path_to_file" download="whitePaper.doc") White Paper
+            .via-whitePaper-form
+              span.via-whitePaper-link White Paper
                 i.via-whitePaper-icon
-              button.via-btn.-fullColor DOWNLOAD DOCUMENT
+              button.getWP.via-btn.-fullColor DOWNLOAD DOCUMENT
 
 
   .via-page-about
@@ -74,7 +74,7 @@ block page-content
       .via-feedbackBlock
         form#feedbackForm.via-feedbackBlock-form
           .via-feedbackBlock-feedbackLine
-            input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="please enter your e-mail")
+            input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес" data-bindPlaceholder='typeEmail')
             button.via-btn.-fullColor(type="submit") Get WP
   
   .via-page-advantages
