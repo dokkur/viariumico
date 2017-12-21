@@ -4,7 +4,7 @@ set -e  # Exit with non-zero if anything fails
 # We do Travis check only for this branch
 BUILD_BRANCH="master"
 
- Do not build a new version if it is a pull-request or commit not to BUILD_BRANCH
+# Do not build a new version if it is a pull-request or commit not to BUILD_BRANCH
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$BUILD_BRANCH" ]; then
     echo "Not $BUILD_BRANCH, skipping deploy;"
     exit 0
