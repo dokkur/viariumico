@@ -8,6 +8,15 @@ import postcssExtend from 'postcss-extend';
 import postcssReporter from 'postcss-reporter';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  js: path.join(__dirname, 'src/js'),
+  static: path.join(__dirname, 'src/static'),
+  views: path.join(__dirname, 'src/pug/views'),
+  dist: path.join(__dirname, 'dist'),
+};
 
 const extractStyles = new ExtractTextPlugin({ filename: 'css/[name].css' });
 
@@ -27,14 +36,14 @@ module.exports = env => {
   const stylesExtension = stylesType === 'scss' ? '.scss' : '.css';
 
   return {
-    context: path.resolve(__dirname, 'src'),
+    context: PATHS.src,
 
     entry: {
       main: './app.js'
     },
 
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: PATHS.dist,
       filename: 'js/[name].js'
     },
 
@@ -43,7 +52,7 @@ module.exports = env => {
     devtool: 'cheap-module-eval-source-map',
 
     devServer: {
-      contentBase: path.join(__dirname, "dist"),
+      contentBase: PATHS.dist,
       watchContentBase: true
     },
 
@@ -51,7 +60,7 @@ module.exports = env => {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve(__dirname, 'src/js'),
+          include: PATHS.js,
           use: [
             {
               loader: 'babel-loader',
@@ -130,34 +139,12 @@ module.exports = env => {
             }
           ]
         },
-        {
-          test: /.*\.(gif|png|jpe?g|svg)$/i,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'assets/[name].[ext]'
-              }
-            },
-          ]
-        },
-        {
-          test: /\.(woff2?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'assets/[name].[ext]'
-              }
-            }
-          ]
-        },
       ]
     },
 
     plugins: [
       new webpack.DefinePlugin({
-        LANG: JSON.stringify("en")
+        LANG: JSON.stringify("ru")
       }),
 
       new webpack.optimize.CommonsChunkPlugin({
@@ -165,7 +152,27 @@ module.exports = env => {
       }),
 
       new HtmlWebpackPlugin({
-        template: 'pug/index.pug'
+        filename: 'index.html',
+        template: 'pug/index.pug',
+        minfy: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'ru/index.html',
+        template: path.resolve(PATHS.views, 'ru/index.pug'),
+        minfy: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'en/index.html',
+        template: path.resolve(PATHS.views, 'en/index.pug'),
+        minfy: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'jpn/index.html',
+        template: path.resolve(PATHS.views, 'jpn/index.pug'),
+        minfy: false
       }),
 
       extractStyles,
@@ -177,6 +184,13 @@ module.exports = env => {
         failOnError: false,
         quiet: true,
       }),
+
+      new CopyWebpackPlugin([
+        {
+          from: PATHS.static,
+          to: PATHS.dist
+        }
+      ]),
 
       new BrowserSyncPlugin({
         files: "dist/**/*.*",

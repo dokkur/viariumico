@@ -21,11 +21,9 @@
   },
   "private": true,
   "scripts": {
-    "sprites": "npm-run-all --parallel sprites:*",
-    "sprites:png": "spritesmith --rc .spritesmith.js",
     "clean": "npm-run-all clean:*",
     "clean:dist": "del-cli dist",
-    "prestart": "npm-run-all --parallel clean sprites",
+    "prestart": "npm-run-all --parallel clean",
     "start": "cross-env STYLES=scss webpack --progress --env.dev --config webpack.config.dev.babel.js",
     "start:webpack-server": "cross-env STYLES=scss webpack-dev-server --open --env.dev",
     "prebuild": "npm-run-all --parallel clean sprites",
@@ -38,7 +36,14 @@
   },
   "dependencies": {
     "babel-preset-env": "^1.6.0",
-    "normalize.css": "^7.0.0"
+    "bootbox": "^4.4.0",
+    "bootstrap": "^4.0.0-beta.2",
+    "copy-webpack-plugin": "^4.3.0",
+    "jquery": "^3.2.1",
+    "jquery-countdown": "^2.2.0",
+    "moment": "^2.20.0",
+    "normalize.css": "^7.0.0",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.1",

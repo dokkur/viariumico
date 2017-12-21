@@ -1,4 +1,26 @@
-header.header
-  .container
-    .header__content
-      include nav
+header.via-header
+  .via-header-wrapper
+    .clearfix
+      .container
+        .via-header-wrapper-logo
+          a(href="/")
+            img(src="/assets/images/logo.png")
+        .via-header-wrapper-rightSide
+          .via-header-wrapper-menu
+            include nav
+            .via-languageSelector
+              ul.via-languageSelector-btn
+                li.via-languageSelector-lang
+                  span#langBtn.via-languageSelector-lang-selectedLang(data-lang="ru") RU
+                  #langPanel.via-languageSelector-lang-langPanel
+                    ul.via-languageSelector-lang-langPanel-inner
+                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="en")
+                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/en" rel="nofollow") EN
+                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="ru")
+                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/ru" rel="nofollow") RU
+                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="jpn")
+                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/jpn" rel="nofollow") JPN
+            .clear
+          .clear
+          //include social
+        .clear

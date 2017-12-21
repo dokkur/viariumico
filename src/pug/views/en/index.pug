@@ -1,0 +1,127 @@
+extends ../../layout/base
+
+block page-title
+  title Viarium
+
+block page-content
+  .via-page-header
+    span.via-page-header-title THE FIRST VR PLATFORM FOR BUSINESS ON BLOCKCHAIN
+    .via-btnWrap
+      button.buyToken.via-btn Buy token
+      button.getWP.via-btn.-fullColor Get WP
+    //span.via-page-header-startTime Начало пресейла 20 января 2018 в 16:00 GTM
+    //.via-timeBox
+      ul.via-timeBox-timeTable
+        li.via-timeBox-timeTable-item
+          span#days.via-timeBox-timeTable-item-value 14
+          span.via-timeBox-timeTable-item-subValue дней
+        li.via-timeBox-timeTable-item
+          span#hours.via-timeBox-timeTable-item-value 21
+          span.via-timeBox-timeTable-item-subValue часов
+        li.via-timeBox-timeTable-item
+          span#minutes.via-timeBox-timeTable-item-value 07
+          span.via-timeBox-timeTable-item-subValue минут
+        li.via-timeBox-timeTable-item
+          span#seconds.via-timeBox-timeTable-item-value 11
+          span.via-timeBox-timeTable-item-subValue секунд
+    //.via-feedbackBlock
+      form#feedbackForm.via-feedbackBlock-form
+        .via-feedbackBlock-feedbackLine
+          input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес")
+          button.via-feedbackBlock-feedbackLine-btn(type="submit") Подписаться
+  
+  .via-page-aboutToken
+    .container
+      h1 TOKEN INFORMATION
+        span TOKEN INFORMATION
+      .row
+        .col-md-6
+          table
+            tr
+              td Type of the token:
+              td Utility token
+            tr
+              td Symbol:
+              td VRM
+            tr
+              td Supply:
+              td 510 000 000
+            tr
+              td For sale:
+              td 300 000 000
+            tr
+              td Price:
+              td 1ETH = 5000 VRM
+            tr
+              td The minimum goal:
+              td 5 000 000 $
+            tr
+              td Maximum goal:
+              td 24 000 000 $
+        .col-md-6
+          .via-whitePaper
+            .via-whitePaper-form
+              span.via-whitePaper-link White Paper
+                i.via-whitePaper-icon
+              button.getWP.via-btn.-fullColor DOWNLOAD DOCUMENT
+
+
+  .via-page-about
+    .container
+      h1 About the project
+        span About the project
+      p Viarium – is a unique platform that combines a network of virtual space and augmented reality for the sale of goods and services. With the help of Viarium  the implementation of goods and services will be possible indeed. Do shopping at VR shopping malls and showrooms, share new opportunities with your friends, family and the whole world while earning  at the new generation Viarium platform!
+      .via-feedbackBlock
+        form#feedbackForm.via-feedbackBlock-form
+          .via-feedbackBlock-feedbackLine
+            input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес" data-bindPlaceholder='typeEmail')
+            button.via-btn.-fullColor(type="submit") Get WP
+  
+  .via-page-advantages
+    .container
+      h1 Our advantages
+        span Our advantages
+      .row
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv1.png")
+            p United infrastructure in VR for business and entertainment
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv2.png")
+            p Security guarantee
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv3.png")
+            p Decentralized resistable system
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv4.png")
+            p You can connect your own server
+        .clear
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv5.png")
+            p Open World
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv6.png")
+            p Single infrastructure in VR for business and entertainment
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv7.png")
+            p Guaranteed security of your business using the blockchain technology
+        .col.col-md-3
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/assets/images/advantages/adv8.png")
+            p The world grows unlimitedly
+        .clear
+

@@ -1,3 +1,6 @@
+/* Fonts */
+@import "./fonts/main";
+
 /* Vendors */
 @import "~normalize.css";
 
@@ -22,5 +25,7 @@
 @import "./objects/header";
 @import "./objects/footer";
 @import "./objects/nav";
+@import "./objects/social";
 
 /* Components */
+@import "./components/modal";
