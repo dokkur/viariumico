@@ -78,6 +78,30 @@ $col-gutter: $container-gutter;
 }
 /**/
 
+a {text-decoration: none;}
+
+h1 {
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 42px;
+  letter-spacing: 0.22px;
+  line-height: 56.91px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 77px;
+
+  & span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 24px;
+    font-size: 60px;
+    color: #f1f4f6;
+    opacity: 0.02;
+  }
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   font-size: 22px;
@@ -95,7 +119,6 @@ body {
   position: relative;
   width: 100%;
   text-align: center;
-  padding-bottom: 45px;
 }
 
 .via-page-header {
@@ -347,29 +370,6 @@ body {
   padding-top: 84px;
   padding-bottom: 146px;
 
-  & h1 {
-    display: block;
-    position: relative;
-    color: #fff;
-    font-size: 42px;
-    letter-spacing: 0.22px;
-    line-height: 56.91px;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 77px;
-
-    &:after {
-      display: block;
-      position: absolute;
-      content: 'ИНФОРМАЦИЯ О ТОКЕНЕ';
-      width: 100%;
-      top: 24px;
-      font-size: 60px;
-      color: #f1f4f6;
-      opacity: 0.02;
-    }
-  }
-
   & table {
     width: 93%;
     border-collapse: collapse;
@@ -452,29 +452,10 @@ body {
   background-size: cover;
   background-position-x: center;
   padding-top: 84px;
-  padding-bottom: 117px;
+  padding-bottom: 118px;
 
   & h1 {
-    display: block;
-    position: relative;
-    color: #fff;
-    font-size: 42px;
-    letter-spacing: 0.22px;
-    line-height: 56.91px;
-    font-weight: 800;
-    text-transform: uppercase;
     margin-bottom: 96px;
-
-    &:after {
-      display: block;
-      position: absolute;
-      content: 'О проекте';
-      width: 100%;
-      top: 24px;
-      font-size: 60px;
-      color: #f1f4f6;
-      opacity: 0.02;
-    }
   }
 
   & p {
@@ -501,27 +482,17 @@ body {
 
 .via-page-advantages {
   position: relative;
+  padding-bottom: 53px;
 
   & h1 {
-    display: block;
-    position: relative;
     color: #474958;
     font-size: 43px;
-    letter-spacing: 0.22px;
-    line-height: 56.91px;
     font-weight: 800;
-    text-transform: uppercase;
     margin: 84px 0 51px 0;
 
-    &:after {
-      display: block;
-      position: absolute;
-      content: 'Наши преимущества';
-      width: 100%;
-      top: 24px;
-      font-size: 60px;
-      color: #f1f4f6;
+    & span {
       z-index: -1;
+      opacity: 1;
     }
   }
 

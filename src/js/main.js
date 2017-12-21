@@ -7,6 +7,12 @@ import moment from "moment";
 import countdown from "jquery-countdown";
 
 $(document).ready(function(){
+  
+  var langFromUrl = window.location.pathname.replace(/\//g,'');
+  if (langFromUrl) {
+    $('#langBtn').data('lang', langFromUrl);
+    $('#langBtn').text(langFromUrl.toUpperCase());
+  }
 
   /* language selector */
     $('#langBtn').click(function(event) {
@@ -20,7 +26,7 @@ $(document).ready(function(){
     });
 
     $('#langPanel').click(function(event) {
-      event.preventDefault();
+      // event.preventDefault();
       if ($(event.target).parent().data().lang) {
         $('#langBtn').data('lang', $(event.target).parent().data().lang);
         $('#langBtn').text($(event.target).parent().text());

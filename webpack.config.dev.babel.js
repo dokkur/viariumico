@@ -14,6 +14,7 @@ const PATHS = {
   src: path.join(__dirname, 'src'),
   js: path.join(__dirname, 'src/js'),
   static: path.join(__dirname, 'src/static'),
+  views: path.join(__dirname, 'src/pug/views'),
   dist: path.join(__dirname, 'dist'),
 };
 
@@ -151,7 +152,27 @@ module.exports = env => {
       }),
 
       new HtmlWebpackPlugin({
-        template: 'pug/index.pug'
+        filename: 'index.html',
+        template: 'pug/index.pug',
+        minfy: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'ru/index.html',
+        template: path.resolve(PATHS.views, 'ru/index.pug'),
+        minfy: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'en/index.html',
+        template: path.resolve(PATHS.views, 'en/index.pug'),
+        minfy: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'jpy/index.html',
+        template: path.resolve(PATHS.views, 'jpy/index.pug'),
+        minfy: false
       }),
 
       extractStyles,
