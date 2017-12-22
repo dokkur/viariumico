@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   width: 100%;
-  background: url(/assets/images/footerBg.jpg) no-repeat;
+  background: url(/my_assets/images/footerBg.jpg) no-repeat;
   background-size: cover;
   background-position-x: center;
 
@@ -56,4 +56,45 @@
 
 .hiddenModal {
   display: none;
+}
+
+@media (max-width: 500px) {
+  .via-footer {
+    padding-bottom: 8px;
+    
+    &-wrapper {
+      &-logo {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        width: 80px;
+        padding: 16px 0 13px 0;
+      }
+
+      &-contuctUs {
+        float: none;
+        padding: 0;
+        text-align: center;
+
+        &-span {
+          font-size: 15px;
+
+          & a {
+            font-size: 15px;
+          }
+        }
+
+        & .via-social {
+          height: 20px;
+          margin-top: 0px;
+
+          & a {
+            vertical-align: top;
+            margin: 0 6px;
+          }
+        }
+      }
+    }
+  }
 }

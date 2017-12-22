@@ -1,7 +1,7 @@
 extends ../../layout/base
 
 block page-title
-  title Viarium
+  title Viarium — Единая инфраструктура в VR для бизнеса и развлечений
 
 block page-content
   .via-page-header
@@ -35,7 +35,7 @@ block page-content
       h1 ИНФОРМАЦИЯ О ТОКЕНЕ
         span ИНФОРМАЦИЯ О ТОКЕНЕ
       .row
-        .col-md-6
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
           table
             tr
               td Тип токена:
@@ -45,20 +45,20 @@ block page-content
               td VRM
             tr
               td Поставка:
-              td 510 000 000
+              td 1 000 000 000
             tr
               td На продажу:
-              td 300 000 000
+              td 550 000 000
             tr
               td Цена:
-              td 1ETH = 5000 VRM
+              td 1 VRM = от 0,02 $
             tr
               td Минимальная цель:
               td 5 000 000 $
             tr
               td Максимальная цель:
-              td 24 000 000 $
-        .col-md-6
+              td 20 000 000 $
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
           .via-whitePaper
             .via-whitePaper-form
               span.via-whitePaper-link White Paper
@@ -71,57 +71,58 @@ block page-content
       h1 О проекте
         span О проекте
       p Viarium – это уникальная платформа, объединяющая в себе сеть виртуального пространства и дополненной реальности для продажи товаров и услуг. С помощью Viarium становится возможность реализации своих товаров и услуг. Совершайте покупки в торговых центрах и шоурумах VR, делитесь новыми возможностями с друзьями, семьей и всем миром, получая при этом доход на торговой площадке нового поколения Viarium!
-      .via-feedbackBlock
+      .via-feedbackBlock.-mobileHide
         form#feedbackForm.via-feedbackBlock-form
           .via-feedbackBlock-feedbackLine
             input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес")
             button.via-btn.-fullColor(type="submit") Get WP
+      button.getWP.via-btn.-fullColor.-mobileVisible(type="submit") Get WP
   
   .via-page-advantages
     .container
       h1 Наши преимущества
         span Наши преимущества
       .row
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv1.png")
+              img(src="/my_assets/images/advantages/adv1.png")
             p Единая инфраструктура в VR для бизнеса и развлечений
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv2.png")
+              img(src="/my_assets/images/advantages/adv2.png")
             p Гарантия безопасности
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv3.png")
+              img(src="/my_assets/images/advantages/adv3.png")
             p Децентрализованная устойчивая система
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv4.png")
+              img(src="/my_assets/images/advantages/adv4.png")
             p Можно подключить свой сервер
         .clear
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv5.png")
+              img(src="/my_assets/images/advantages/adv5.png")
             p Открытый Мир
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv6.png")
+              img(src="/my_assets/images/advantages/adv6.png")
             p Единая инфраструктура в VR для бизнеса и развлечений
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv7.png")
+              img(src="/my_assets/images/advantages/adv7.png")
             p Гарантированная защищенность бизнеса за счет блокчейна
-        .col.col-md-3
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
           .via-page-advantages-wrap
             .via-page-advantages-wrap-icon
-              img(src="/assets/images/advantages/adv8.png")
+              img(src="/my_assets/images/advantages/adv8.png")
             p Мир неограниченно растет
         .clear
 

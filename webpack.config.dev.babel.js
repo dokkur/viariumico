@@ -170,8 +170,8 @@ module.exports = env => {
       }),
 
       new HtmlWebpackPlugin({
-        filename: 'jpn/index.html',
-        template: path.resolve(PATHS.views, 'jpn/index.pug'),
+        filename: 'jp/index.html',
+        template: path.resolve(PATHS.views, 'jp/index.pug'),
         minfy: false
       }),
 

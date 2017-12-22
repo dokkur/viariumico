@@ -47,6 +47,12 @@ $(document).ready(function(){
     });
   /**/
 
+  /* mobile menu */
+    $('.mobileMenuTriger').click(function(event) {
+      $('.mobileMenu').toggleClass('-opened', '-opened');
+    });
+  /**/
+
   /* count down */
     var endTime = "2018-01-20T16:00:00+00:00";
     var formattedEndTime = moment(new Date(endTime)).format('YYYY/MM/DD HH:mm');
@@ -74,9 +80,10 @@ $(document).ready(function(){
       var email = $(event.target).find("#email").val();
       if (!email) {
         bootbox.alert({
-          title: langVariables.typeEmail,
-          message: "<p>Похоже вы забыли ввести ваш E-mail адрес ...</p>",
+          title: langVariables.popUpforgetEmail,
+          message: langVariables.forgetEmail,
           backdrop: true,
+          closeButton: false,
           callback: function(){ 
             console.log('email is empty');
           }
@@ -89,9 +96,10 @@ $(document).ready(function(){
           data: form,
           success: function () {
               bootbox.alert({
-              title: "Успех!",
-              message: "Ваша заявка успешно отправлена",
+              title: langVariables.popUpSuccess,
+              message: langVariables.popUpSuccessDesc,
               backdrop: true,
+              closeButton: false,
               callback: function(){ 
                 console.log('succes');
                 $('#feedbackForm').find("#email").val('');
@@ -100,9 +108,10 @@ $(document).ready(function(){
           },
           error: function () {
             bootbox.alert({
-              title: "Нам не удалось отправить вашу заявку",
-              message: "Что-то пошло не так...",
+              title: langVariables.popUpError,
+              message: langVariables.popUpErrorDesc,
               backdrop: true,
+              closeButton: false,
               callback: function(){ 
                 console.log('server error');
               }
@@ -117,9 +126,14 @@ $(document).ready(function(){
     /* Buy token */
       $('.buyToken').click(function(event) {
           var buyTokenPopUp = bootbox.dialog({
-            title: 'INVEST VIARIUM',
+            title: 'Buy token',
             message: '<p></p>',
             backdrop: true,
+            backdrop: true,
+            closeButton: false,
+            onEscape: function() {
+              console.log('close modal');
+            },
           });
           buyTokenPopUp.find('.bootbox-body').html($('#buyTokenPopUp').clone());
 
@@ -130,9 +144,10 @@ $(document).ready(function(){
               var email = $(event.target).find(".via-form-input").val();
               if (!email) {
                 bootbox.alert({
-                  title: langVariables.typeEmail,
-                  message: "Похоже вы забыли ввести ваш E-mail адрес ...",
+                  title: langVariables.popUpforgetEmail,
+                  message: langVariables.forgetEmail,
                   backdrop: true,
+                  closeButton: false,
                   callback: function(){ 
                     console.log('email is empty');
                   }
@@ -144,10 +159,11 @@ $(document).ready(function(){
                   url: "https://worldwifi.herokuapp.com/create_request",
                   data: form,
                   success: function () {
-                      bootbox.alert({
-                      title: "Успех!",
-                      message: "Ваша заявка успешно отправлена",
+                    bootbox.alert({
+                      title: langVariables.popUpSuccess,
+                      message: langVariables.popUpSuccessDesc,
                       backdrop: true,
+                      closeButton: false,
                       callback: function(){ 
                         console.log('succes');
                         $('#feedbackForm').find("#email").val('');
@@ -156,9 +172,10 @@ $(document).ready(function(){
                   },
                   error: function () {
                     bootbox.alert({
-                      title: "Нам не удалось отправить вашу заявку",
-                      message: "Что-то пошло не так...",
+                      title: langVariables.popUpError,
+                      message: langVariables.popUpErrorDesc,
                       backdrop: true,
+                      closeButton: false,
                       callback: function(){ 
                         console.log('server error');
                       }
@@ -174,9 +191,13 @@ $(document).ready(function(){
     /* Get WP */
       $('.getWP').click(function(event) {
           var getWpPopUp = bootbox.dialog({
-            title: 'INVEST VIARIUM',
+            title: 'Get WP',
             message: '<p></p>',
             backdrop: true,
+            closeButton: false,
+            onEscape: function() {
+              console.log('close modal');
+            },
           });
           getWpPopUp.find('.bootbox-body').html($('#getWpPopUp').clone());
 
@@ -187,9 +208,10 @@ $(document).ready(function(){
               var email = $(event.target).find(".via-form-input").val();
               if (!email) {
                 bootbox.alert({
-                  title: langVariables.typeEmail,
-                  message: "Похоже вы забыли ввести ваш E-mail адрес ...",
+                  title: langVariables.popUpforgetEmail,
+                  message: langVariables.forgetEmail,
                   backdrop: true,
+                  closeButton: false,
                   callback: function(){ 
                     console.log('email is empty');
                   }
@@ -202,9 +224,10 @@ $(document).ready(function(){
                   data: form,
                   success: function () {
                       bootbox.alert({
-                      title: "Успех!",
-                      message: "Ваша заявка успешно отправлена",
+                      title: langVariables.popUpSuccess,
+                      message: langVariables.popUpSuccessDesc,
                       backdrop: true,
+                      closeButton: false,
                       callback: function(){ 
                         console.log('succes');
                         $('#feedbackForm').find("#email").val('');
@@ -213,9 +236,10 @@ $(document).ready(function(){
                   },
                   error: function () {
                     bootbox.alert({
-                      title: "Нам не удалось отправить вашу заявку",
-                      message: "Что-то пошло не так...",
+                      title: langVariables.popUpError,
+                      message: langVariables.popUpErrorDesc,
                       backdrop: true,
+                      closeButton: false,
                       callback: function(){ 
                         console.log('server error');
                       }

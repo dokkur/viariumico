@@ -4,17 +4,35 @@
         "ru": {
             "typeEmail": "Введите ваш E-mail адрес",
             "buyTokenPopUpText": "<p>Подпишите до 18 декабря и <span> получите 100 VRM </ span> Токены бесплатно!</p>",
-            "getWpPopUpText": "<p>Для получения White paper введите свой email</p>"
+            "getWpPopUpText": "<p>Для получения White paper введите свой email</p>",
+            "popUpforgetEmail": "НЕ ЗАПОЛНИЛИ АДРЕС",
+            "forgetEmail": "<p>Похоже вы забыли ввести ваш E-mail адрес ...</p>",
+            "popUpSuccess": "Успех!",
+            "popUpSuccessDesc": "<p>Ваша заявка успешно отправлена</p>",
+            "popUpError": "Нам не удалось отправить вашу заявку",
+            "popUpErrorDesc": "<p>Что-то пошло не так...</p>"
         },
         "en": {
             "typeEmail": "please enter your e-mail",
             "buyTokenPopUpText": "<p>Sign up before December 18th and <span>get 100 VRM</span> Tokens free!</p>",
-            "getWpPopUpText": "<p>To get White paper, please, enter your email</p>"
+            "getWpPopUpText": "<p>To get White paper, please, enter your email</p>",
+            "popUpforgetEmail": "E-MAIL US",
+            "forgetEmail": "<p>It seems you should enter your e-mail first befor sending the form...</p>",
+            "popUpSuccess": "Success!",
+            "popUpSuccessDesc": "<p>Your order was successfully submitted</p>",
+            "popUpError": "We were unable to submit your application",
+            "popUpErrorDesc": "<p>Something went wrong...</p>"
         },
-        "jpn": {
+        "jp": {
             "typeEmail": "あなたの電子メールを入力します",
             "buyTokenPopUpText": "<p>12月18日までにサインアップし、<span> 100 VRM </ span>トークンを無料で入手！</p>",
-            "getWpPopUpText": "<p>ホワイト新聞をとるために、どうぞ、あなたの電子メールを入力してください</p>"
+            "getWpPopUpText": "<p>ホワイト新聞をとるために、どうぞ、あなたの電子メールを入力してください</p>",
+            "popUpforgetEmail": "私達に電子メールを送り",
+            "forgetEmail": "<p>ホワイト新聞をとるために、どうぞ、あなたの電子メールを入力してください...</p>",
+            "popUpSuccess": "成功!",
+            "popUpSuccessDesc": "<p>注文が正常に送信されました</p>",
+            "popUpError": "申請書を提出できませんでした",
+            "popUpErrorDesc": "<p>何かが間違っていた...</p>"
         }
     }
 }
