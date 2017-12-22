@@ -1,0 +1,127 @@
+extends ../../layout/base
+
+block page-title
+  title Viarium — ビジネスとエンターテイメントのためのVRの連合した基盤
+
+block page-content
+  .via-page-header
+    span.via-page-header-title BLOCKCHAINのビジネスのための最初のVRプラットフォーム
+    .via-btnWrap
+      button.buyToken.via-btn Buy token
+      button.getWP.via-btn.-fullColor Get WP
+    //span.via-page-header-startTime Начало пресейла 20 января 2018 в 16:00 GTM
+    //.via-timeBox
+      ul.via-timeBox-timeTable
+        li.via-timeBox-timeTable-item
+          span#days.via-timeBox-timeTable-item-value 14
+          span.via-timeBox-timeTable-item-subValue дней
+        li.via-timeBox-timeTable-item
+          span#hours.via-timeBox-timeTable-item-value 21
+          span.via-timeBox-timeTable-item-subValue часов
+        li.via-timeBox-timeTable-item
+          span#minutes.via-timeBox-timeTable-item-value 07
+          span.via-timeBox-timeTable-item-subValue минут
+        li.via-timeBox-timeTable-item
+          span#seconds.via-timeBox-timeTable-item-value 11
+          span.via-timeBox-timeTable-item-subValue секунд
+    //.via-feedbackBlock
+      form#feedbackForm.via-feedbackBlock-form
+        .via-feedbackBlock-feedbackLine
+          input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="あなたの電子メールを入力します")
+          button.via-feedbackBlock-feedbackLine-btn(type="submit") 購読する
+  
+  .via-page-aboutToken
+    .container
+      h1 トークン情報
+        span トークン情報
+      .row
+        .col-md-6
+          table
+            tr
+              td トークンのタイプ：
+              td ユーティリティトークン
+            tr
+              td シンボル:
+              td VRM
+            tr
+              td 供給:
+              td 1 000 000 000
+            tr
+              td 販売のため:
+              td 550 000 000
+            tr
+              td 価格:
+              td 1 VRM = от 0,02 $
+            tr
+              td 最小目標:
+              td 5 000 000 $
+            tr
+              td 最大目標:
+              td 20 000 000 $
+        .col-md-6
+          .via-whitePaper
+            .via-whitePaper-form
+              span.via-whitePaper-link 白書
+                i.via-whitePaper-icon
+              button.getWP.via-btn.-fullColor ドキュメントをダウンロードする
+
+
+  .via-page-about
+    .container
+      h1 プロジェクトについて
+        span プロジェクトについて
+      p Viarium – は、商品とサービスの販売のために仮想空間と拡張現実のネットワークを結合するユニークなプラットフォームです。Viariumの助けを借りて、商品とサービスの実施は、本当に可能です。VRショッピングセンターで買い物をしてください、そして、新世代でViariumプラットホームを得ている間、ショールームは新しい機会をあなたの友人、家族と全世界と共有します！
+      .via-feedbackBlock
+        form#feedbackForm.via-feedbackBlock-form
+          .via-feedbackBlock-feedbackLine
+            input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="あなたの電子メールを入力します")
+            button.via-btn.-fullColor(type="submit") Get WP
+  
+  .via-page-advantages
+    .container
+      h1 我々の利点。
+        span 我々の利点。
+      .row
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv1.png")
+            p ビジネスとエンターテイメントのための米国のインフラ。
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv2.png")
+            p 安全保障
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv3.png")
+            p 分散型抵抗性システム。
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv4.png")
+            p 自分のサーバーに接続することができます。
+        .clear
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv5.png")
+            p オープンワールド
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv6.png")
+            p ビジネスとエンターテイメントのためのVRの単一インフラ
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv7.png")
+            p ブロックチェーン技術を使用してビジネスのセキュリティを保証。
+        .col.col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-advantages-wrap
+            .via-page-advantages-wrap-icon
+              img(src="/my_assets/images/advantages/adv8.png")
+            p 世界は無限に成長する
+        .clear
+

@@ -1,43 +1,43 @@
 /* Fonts */
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.eot");
-  src: url("/assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.woff") format("woff"), url("/assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.ttf") format("ttf");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.eot");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.eot?#iefix") format("embedded-opentype"), url("/my_assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.woff") format("woff"), url("/my_assets/fonts/SegoeUI/SegoeUILight/SegoeUILight.ttf") format("ttf");
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/assets/fonts/SegoeUI/SegoeUISemilight/SegoeUISemilight.otf");
-  src: url("/assets/fonts/SegoeUI/SegoeUISemilight/SegoeUISemilight.otf") format("opentype"), url("/assets/fonts/SegoeUI/SegoeUISemilight/SegoeUISemilight.ttf") format("ttf");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUISemilight/SegoeUISemilight.otf");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUISemilight/SegoeUISemilight.otf") format("opentype"), url("/my_assets/fonts/SegoeUI/SegoeUISemilight/SegoeUISemilight.ttf") format("ttf");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.eot");
-  src: url("/assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("/assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.ttf") format("ttf");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.eot");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("/my_assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("/my_assets/fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.eot");
-  src: url("/assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("/assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.ttf") format("ttf");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("/my_assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("/my_assets/fonts/SegoeUI/SegoeUIItalic/SegoeUIItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: italic; }
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.eot");
-  src: url("/assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"), url("/assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.ttf") format("ttf");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.eot");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix") format("embedded-opentype"), url("/my_assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"), url("/my_assets/fonts/SegoeUI/SegoeUISemiBold/SegoeUISemiBold.ttf") format("ttf");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.eot");
-  src: url("/assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("/assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.ttf") format("ttf");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.eot");
+  src: url("/my_assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("/my_assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("/my_assets/fonts/SegoeUI/SegoeUIBold/SegoeUIBold.ttf") format("ttf");
   font-weight: 800;
   font-style: normal; }
 
@@ -628,7 +628,7 @@ body {
   z-index: 0;
   width: 100%;
   min-height: 150px;
-  background: url(/assets/images/headerBack.jpg) no-repeat;
+  background: url(/my_assets/images/headerBack.jpg) no-repeat;
   background-size: cover;
   background-position-x: center;
   padding-top: 286px;
@@ -812,7 +812,7 @@ body {
 
 .via-page-aboutToken {
   position: relative;
-  background: url(/assets/images/aboutTokenBg.png) no-repeat;
+  background: url(/my_assets/images/aboutTokenBg.png) no-repeat;
   background-size: cover;
   background-position-x: center;
   padding-top: 84px;
@@ -858,7 +858,9 @@ body {
       width: 25px;
       height: 33px;
       margin-left: 25px;
-      background: url(/assets/images/icons/whitePaper.png) no-repeat; }
+      background: url(/my_assets/images/icons/whitePaper.png) no-repeat;
+      background-size: cover;
+      background-position-x: center; }
   .via-whitePaper .via-btn {
     float: right;
     width: 48%;
@@ -870,7 +872,9 @@ body {
     display: block;
     position: absolute;
     content: '';
-    background: url(/assets/images/graph.png) no-repeat;
+    background: url(/my_assets/images/graph.png) no-repeat;
+    background-size: cover;
+    background-position-x: center;
     top: 45px;
     left: -33px;
     width: 622px;
@@ -878,7 +882,7 @@ body {
 
 .via-page-about {
   position: relative;
-  background: url(/assets/images/aboutBg.png) no-repeat;
+  background: url(/my_assets/images/aboutBg.png) no-repeat;
   background-size: cover;
   background-position-x: center;
   padding-top: 84px;
@@ -931,6 +935,9 @@ body {
       line-height: 19.63px;
       color: #636785; }
 
+.-mobileVisible {
+  visibility: hidden; }
+
 /* Adaptiv */
 /*
 @media (min-width: 576px) {
@@ -957,6 +964,105 @@ body {
   }
 }
 */
+@media (max-width: 992px) {
+  .via-page-advantages-wrap {
+    min-height: 180px; } }
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 20px; }
+    h1 span {
+      font-size: 25px;
+      top: 13px; }
+  .via-btn {
+    font-size: 14px;
+    padding: 13px 34px;
+    border-left: 1px solid #ff2136;
+    border-right: 1px solid #c55b2c;
+    -webkit-background-size: 100% 1px;
+    -moz-background-size: 100% 1px;
+    background-size: 100% 1px;
+    margin: 0 9px; }
+    .via-btn:after {
+      height: 1px; }
+    .via-btn.-fullColor {
+      padding: 13px 43px; }
+  .via-page-header {
+    padding-top: 191px;
+    padding-bottom: 173px; }
+    .via-page-header-title {
+      font-size: 21px;
+      line-height: 21px; }
+  .via-btnWrap {
+    margin-top: 22px; }
+  .via-page-aboutToken {
+    padding-top: 5px; }
+    .via-page-aboutToken h1 {
+      margin-bottom: -1px; }
+    .via-page-aboutToken table {
+      width: 76%;
+      margin: 0 auto; }
+      .via-page-aboutToken table tr td {
+        font-size: 12px;
+        line-height: 28px; }
+  .via-whitePaper {
+    width: 76%;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 15px;
+    padding-bottom: 112px;
+    line-height: 30px; }
+    .via-whitePaper-link {
+      width: 54%;
+      height: 30px;
+      font-size: 10px; }
+      .via-whitePaper-link .via-whitePaper-icon {
+        width: 15px;
+        height: 21px;
+        margin-left: 18px; }
+    .via-whitePaper .via-btn {
+      width: 46%;
+      height: 30px;
+      font-size: 9px;
+      padding: 0; }
+    .via-whitePaper:after {
+      width: 277px;
+      height: 91px;
+      top: 22px;
+      left: 0px; }
+  .via-page-about {
+    padding-top: 44px;
+    padding-bottom: 87px; }
+    .via-page-about h1 {
+      margin-bottom: 29px; }
+    .via-page-about p {
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 45px; }
+  .via-page-advantages {
+    padding-top: 13px;
+    padding-bottom: 53px; }
+    .via-page-advantages h1 {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 3px; }
+    .via-page-advantages .row .clear {
+      clear: none; }
+    .via-page-advantages-wrap {
+      width: 88%;
+      min-height: 150px; }
+      .via-page-advantages-wrap-icon {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 6px; }
+      .via-page-advantages-wrap p {
+        font-size: 11px;
+        line-height: 14.63px; }
+  .-mobileHide {
+    display: none; }
+  .-mobileVisible {
+    visibility: visible; } }
+
 @media (min-width: 768px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
@@ -1086,6 +1192,101 @@ p:last-child {
     .via-header-wrapper-menu {
       position: relative;
       border-bottom: 2px solid rgba(255, 255, 255, 0.28); }
+    .via-header-wrapper-mobileMenuTriger {
+      display: none;
+      overflow: hidden;
+      position: relative;
+      width: 31px;
+      height: 30px;
+      margin-top: 10px; }
+      .via-header-wrapper-mobileMenuTriger span {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        color: black;
+        background-color: white;
+        position: absolute;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .4s ease-in-out;
+        transition: .4s ease-in-out; }
+      .via-header-wrapper-mobileMenuTriger span:nth-child(1) {
+        top: 0; }
+      .via-header-wrapper-mobileMenuTriger span:nth-child(2) {
+        top: 13px;
+        width: 88%; }
+      .via-header-wrapper-mobileMenuTriger span:nth-child(3) {
+        top: 26px; }
+      .via-header-wrapper-mobileMenuTriger.-open {
+        margin-top: 14px; }
+        .via-header-wrapper-mobileMenuTriger.-open span:nth-child(1) {
+          top: 9px;
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg); }
+        .via-header-wrapper-mobileMenuTriger.-open span:nth-child(2) {
+          opacity: 0;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          left: -60px; }
+        .via-header-wrapper-mobileMenuTriger.-open span:nth-child(3) {
+          top: 9px;
+          -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg); }
+    .via-header-wrapper-mobileMenu {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      padding-top: 16px;
+      background: url(/my_assets/images/popUpBg.png) no-repeat;
+      background-size: cover;
+      background-position-x: center; }
+      .via-header-wrapper-mobileMenu.-opened {
+        display: block; }
+      .via-header-wrapper-mobileMenu-logo {
+        position: relative;
+        float: left;
+        width: 60px; }
+      .via-header-wrapper-mobileMenu .via-nav {
+        margin: 0;
+        float: none; }
+        .via-header-wrapper-mobileMenu .via-nav-menu {
+          text-align: center;
+          padding: 25px 0 18px 0; }
+          .via-header-wrapper-mobileMenu .via-nav-menu-item {
+            display: block;
+            margin: 0 61px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.28); }
+            .via-header-wrapper-mobileMenu .via-nav-menu-item:last-of-type {
+              border-bottom: 0; }
+            .via-header-wrapper-mobileMenu .via-nav-menu-item-link {
+              font-size: 19px; }
+            .via-header-wrapper-mobileMenu .via-nav-menu-item.-active .via-nav-menu-item-link {
+              color: #00cde2; }
+              .via-header-wrapper-mobileMenu .via-nav-menu-item.-active .via-nav-menu-item-link:after {
+                display: none; }
+      .via-header-wrapper-mobileMenu .via-languageSelector-lang-langPanel-inner {
+        margin: 12px 11px; }
+        .via-header-wrapper-mobileMenu .via-languageSelector-lang-langPanel-inner-item {
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.28);
+          width: 20%;
+          height: 37px;
+          text-align: center;
+          margin-right: 20px; }
+          .via-header-wrapper-mobileMenu .via-languageSelector-lang-langPanel-inner-item-link {
+            color: #fff;
+            margin: 0;
+            font-size: 19px;
+            line-height: 37px; }
+        .via-header-wrapper-mobileMenu .via-languageSelector-lang-langPanel-inner-item:nth-child(4) {
+          margin-right: 0; }
 
 .via-languageSelector {
   float: right;
@@ -1111,7 +1312,7 @@ p:last-child {
         top: 0;
         right: 0;
         margin-top: 9px;
-        background: url(/assets/images/langArr.png) no-repeat; }
+        background: url(/my_assets/images/langArr.png) no-repeat; }
     .via-languageSelector-lang-langPanel {
       display: none;
       position: absolute;
@@ -1148,15 +1349,29 @@ p:last-child {
               top: 0;
               right: -10px;
               margin-top: 8px;
-              background: url(/assets/images/langArr.png) no-repeat; }
+              background: url(/my_assets/images/langArr.png) no-repeat; }
           .via-languageSelector-lang-langPanel-inner-item:last-of-type {
             margin-bottom: 0; }
+
+/* Adaptiv */
+@media (max-width: 975px) {
+  .via-header-wrapper {
+    margin-top: 13px; }
+    .via-header-wrapper-logo {
+      width: 58px; }
+    .via-header-wrapper-rightSide {
+      margin: 0;
+      width: auto; }
+    .via-header-wrapper-menu {
+      display: none; }
+    .via-header-wrapper-mobileMenuTriger {
+      display: block; } }
 
 .via-footer {
   display: block;
   position: relative;
   width: 100%;
-  background: url(/assets/images/footerBg.jpg) no-repeat;
+  background: url(/my_assets/images/footerBg.jpg) no-repeat;
   background-size: cover;
   background-position-x: center; }
   .via-footer-wrapper-logo {
@@ -1191,6 +1406,31 @@ p:last-child {
 
 .hiddenModal {
   display: none; }
+
+@media (max-width: 500px) {
+  .via-footer {
+    padding-bottom: 8px; }
+    .via-footer-wrapper-logo {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      width: 80px;
+      padding: 16px 0 13px 0; }
+    .via-footer-wrapper-contuctUs {
+      float: none;
+      padding: 0;
+      text-align: center; }
+      .via-footer-wrapper-contuctUs-span {
+        font-size: 15px; }
+        .via-footer-wrapper-contuctUs-span a {
+          font-size: 15px; }
+      .via-footer-wrapper-contuctUs .via-social {
+        height: 20px;
+        margin-top: 0px; }
+        .via-footer-wrapper-contuctUs .via-social a {
+          vertical-align: top;
+          margin: 0 6px; } }
 
 .via-nav {
   margin-left: 57px;
@@ -1239,6 +1479,7 @@ p:last-child {
     height: 100%;
     margin: 0 15px; }
     .via-social a img {
+      display: block;
       height: 100%;
       width: auto; }
 
@@ -1309,7 +1550,7 @@ button.close {
 
 .modal-content {
   position: relative;
-  background: url(/assets/images/popUpBg.png) no-repeat;
+  background: url(/my_assets/images/popUpBg.png) no-repeat;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #999;
@@ -1361,7 +1602,7 @@ button.close {
   height: 2px;
   content: '';
   margin: 0 auto;
-  background: url(/assets/images/modalTitleLine.png) no-repeat;
+  background: url(/my_assets/images/modalTitleLine.png) no-repeat;
   background-size: cover;
   background-position-x: center;
   margin-top: 11px; }
@@ -1432,3 +1673,7 @@ button.close {
 @media (min-width: 992px) {
   .modal-lg {
     width: 900px; } }
+
+@media (max-width: 500px) {
+  .modal-body .via-form-input {
+    font-size: 12px; } }

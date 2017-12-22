@@ -1,26 +1,47 @@
+- var langItems = [{code:'en', title:'ENG', link: '/en'}, {code:'ru', title:'RUS', link: '/ru'}, {code:'jp', title:'JPN', link: '/jp'}];
 header.via-header
   .via-header-wrapper
     .clearfix
       .container
         .via-header-wrapper-logo
           a(href="/")
-            img(src="/assets/images/logo.png")
+            img(src="/my_assets/images/logo.png")
         .via-header-wrapper-rightSide
           .via-header-wrapper-menu
             include nav
             .via-languageSelector
               ul.via-languageSelector-btn
                 li.via-languageSelector-lang
-                  span#langBtn.via-languageSelector-lang-selectedLang(data-lang="ru") RU
+                  span#langBtn.via-languageSelector-lang-selectedLang(data-lang="ru") RUS
                   #langPanel.via-languageSelector-lang-langPanel
                     ul.via-languageSelector-lang-langPanel-inner
-                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="en")
-                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/en" rel="nofollow") EN
-                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="ru")
-                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/ru" rel="nofollow") RU
-                      li.via-languageSelector-lang-langPanel-inner-item(data-lang="jpn")
-                        a.via-languageSelector-lang-langPanel-inner-item-link(href="/jpn" rel="nofollow") JPN
+                      each langItem in langItems
+                        li.via-languageSelector-lang-langPanel-inner-item(data-lang=langItem.code)
+                          a.via-languageSelector-lang-langPanel-inner-item-link(href=langItem.link rel="nofollow")= langItem.title
+
             .clear
+          .mobileMenuTriger.via-header-wrapper-mobileMenuTriger
+              span
+              span
+              span
+
+          .mobileMenu.via-header-wrapper-mobileMenu
+            .container
+              .via-header-wrapper-mobileMenu-logo
+                a(href="/")
+                  img(src="/my_assets/images/logo.png")
+
+              .via-header-wrapper-rightSide
+                .mobileMenuTriger.via-header-wrapper-mobileMenuTriger.-open
+                  span
+                  span
+                  span
+              .clear
+              include nav
+              ul.via-languageSelector-lang-langPanel-inner
+                each langItem in langItems
+                  li.via-languageSelector-lang-langPanel-inner-item(data-lang=langItem.code)
+                    a.via-languageSelector-lang-langPanel-inner-item-link(href=langItem.link rel="nofollow")= langItem.title
           .clear
           //include social
         .clear

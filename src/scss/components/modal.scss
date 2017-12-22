@@ -64,7 +64,7 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background: url(/assets/images/popUpBg.png) no-repeat;
+  background: url(/my_assets/images/popUpBg.png) no-repeat;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #999;
@@ -119,7 +119,7 @@ button.close {
   height: 2px;
   content: '';
   margin: 0 auto;
-  background: url(/assets/images/modalTitleLine.png) no-repeat;
+  background: url(/my_assets/images/modalTitleLine.png) no-repeat;
   background-size: cover;
   background-position-x: center;
   margin-top: 11px
@@ -206,5 +206,11 @@ button.close {
 @media (min-width: 992px) {
   .modal-lg {
     width: 900px;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-body .via-form-input {
+    font-size: 12px;
   }
 }

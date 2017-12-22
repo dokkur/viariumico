@@ -30,6 +30,148 @@
       position: relative;
       border-bottom: 2px solid rgba(255, 255, 255, 0.28);
     }
+
+    &-mobileMenuTriger {
+      display: none;
+      overflow: hidden;
+      position: relative;
+      width: 31px;
+      height: 30px;
+      margin-top: 10px;
+
+      & span {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        color: black;
+        background-color: white;
+        position: absolute;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .4s ease-in-out;
+        transition: .4s ease-in-out;
+      }
+
+      & span:nth-child(1) {
+        top: 0;
+      }
+      & span:nth-child(2) {
+        top: 13px;
+        width: 88%;
+      }
+      & span:nth-child(3) {
+        top: 26px;
+      }
+
+      &.-open {
+        margin-top: 14px;
+
+        & span:nth-child(1) {
+          top: 9px;
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+
+        & span:nth-child(2) {
+          opacity: 0;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          left: -60px;
+        }
+
+        & span:nth-child(3) {
+          top: 9px;
+          -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+        }
+      }
+    }
+
+    &-mobileMenu {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      padding-top: 16px;
+      background: url(/my_assets/images/popUpBg.png) no-repeat;
+      background-size: cover;
+      background-position-x: center;
+
+      &.-opened {
+        display:block;
+      }
+
+      &-logo {
+        position: relative;
+        float: left;
+        width: 60px;
+      }
+
+      & .via-nav {
+        margin: 0;
+        float: none;
+
+        &-menu {
+          text-align: center;
+          padding: 25px 0 18px 0;
+
+          &-item {
+            display: block;
+            margin: 0 61px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+
+            &:last-of-type {
+              border-bottom: 0;
+            }
+
+            &-link {
+              font-size: 19px;
+            }
+
+            &.-active {
+              & .via-nav-menu-item-link {
+                color: #00cde2;
+
+                &:after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      & .via-languageSelector-lang-langPanel-inner {
+        margin: 12px 11px;
+
+        &-item {
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.28);
+          width: 20%;
+          height: 37px;
+          text-align: center;
+          margin-right: 20px;
+
+          &-link {
+            color: #fff;
+            margin: 0;
+            font-size: 19px;
+            line-height: 37px;
+          }
+        }
+
+        &-item:nth-child(4) {
+          margin-right: 0;
+        }
+      }
+
+    }
   }
 }
 
@@ -62,7 +204,7 @@
         top: 0;
         right: 0;
         margin-top: 9px;
-        background: url(/assets/images/langArr.png) no-repeat;
+        background: url(/my_assets/images/langArr.png) no-repeat;
       }
     }
 
@@ -111,7 +253,7 @@
                 top: 0;
                 right: -10px;
                 margin-top: 8px;
-                background: url(/assets/images/langArr.png) no-repeat;
+                background: url(/my_assets/images/langArr.png) no-repeat;
               }
             }
           }
@@ -120,6 +262,39 @@
             margin-bottom: 0;
           }
         }
+      }
+    }
+  }
+}
+
+/* Adaptiv */
+
+@media (max-width: 975px) {
+  .via-header {
+
+
+    &-wrapper {
+      margin-top: 13px;
+
+      &-logo {
+        width: 58px;
+
+        & img {
+
+        }
+      }
+
+      &-rightSide {
+        margin: 0;
+        width: auto;
+      }
+
+      &-menu {
+        display: none;
+      }
+
+      &-mobileMenuTriger {
+        display: block;
       }
     }
   }
