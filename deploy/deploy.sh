@@ -26,3 +26,4 @@ ssh-add $OUT_KEY
 rsync -avi -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" dist/ deployer@frontend.viarium.io:/var/www/viariumico/dist/
 
 curl -X POST --data-urlencode "payload={\"channel\": \"#notifications\", \"username\": \"Travis-CI\", \"text\": \"Hey, I heard that there was a successful build of \`viariumico\` from commit with SHA $HEAD_COMMIT. Hope it was useful information for you.\", \"icon_emoji\": \":octocat:\"}" https://hooks.slack.com/services/$SLACK_TOKEN
+echo "Seems you have a successful build, yeah!!"
