@@ -1,0 +1,36 @@
+.via-page-about {
+  position: relative;
+  background: url(/my_assets/images/aboutBg.png) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  padding-top: 84px;
+  padding-bottom: 47px;
+
+  & h1 {
+    margin-bottom: 96px;
+  }
+
+  & p {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #fff;
+  }
+
+  & .via-feedbackBlock {
+    width: 608px;
+    height: 66px;
+    margin-top: 69px;
+
+    &-feedbackLine {
+      margin-top: 0;
+    }
+
+    & .via-btn {
+      float: right;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

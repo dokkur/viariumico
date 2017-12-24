@@ -1,0 +1,98 @@
+.via-page-smi {
+  position: relative;
+  padding-bottom: 44px;
+
+  & h1 {
+    color: #474958;
+    font-size: 43px;
+    font-weight: 800;
+    margin: 60px 0 51px 0;
+
+    & span {
+      z-index: -1;
+      opacity: 1;
+    }
+  }
+
+  &-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 3px 15px 1px rgba(5, 5, 5, 0.1);
+    background-color: #fff;
+
+    &-image {
+      display: block;
+      position: relative;
+
+      & img {
+        width:100%
+      }
+    }
+
+    &-desc {
+      text-align: left;
+      padding: 18px 30px;
+      line-height: 17px;
+
+      &-title {
+        color: #474958;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      & p {
+        margin: 0;
+        color: #7d82a3;
+        font-size: 15px;
+        padding: 12px 0 17px 0;
+        line-height: 18px;
+      }
+
+      &-link {
+        display: block;
+        position: relative;
+        color: #474958;
+        font-size: 15px;
+        font-weight: 800;
+
+        &:after {
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          margin-left: 10px;
+          content: '';
+          background: url(/my_assets/images/smi_arr.png) no-repeat;
+          background-size: cover;
+          background-position-x: center;
+          width: 13px;
+          height: 14px;
+        }
+
+        &.-active {
+          color: #86edff;
+
+          &:after {
+            background: url(/my_assets/images/smi_arr_active.png) no-repeat;
+          }
+        }
+
+        &:hover {
+          color: #86edff;
+
+          &:after {
+            background: url(/my_assets/images/smi_arr_active.png) no-repeat;
+          }
+        }
+
+        &:active {
+          color: #86edff;
+
+          &:after {
+            background: url(/my_assets/images/smi_arr_active.png) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

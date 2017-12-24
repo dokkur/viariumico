@@ -2,6 +2,7 @@
     "locale": "ru",
     "translations": {
         "ru": {
+            "title": "Viarium — Единая инфраструктура в VR для бизнеса и развлечений",
             "typeEmail": "Введите ваш E-mail адрес",
             "buyTokenPopUpText": "<p>Подпишите до 18 декабря и <span> получите 100 VRM </ span> Токены бесплатно!</p>",
             "getWpPopUpText": "<p>Для получения White paper введите свой email</p>",
@@ -13,6 +14,7 @@
             "popUpErrorDesc": "<p>Что-то пошло не так...</p>"
         },
         "en": {
+            "title": "Viarium — United infrastructure in VR for business and entertainment",
             "typeEmail": "please enter your e-mail",
             "buyTokenPopUpText": "<p>Sign up before December 18th and <span>get 100 VRM</span> Tokens free!</p>",
             "getWpPopUpText": "<p>To get White paper, please, enter your email</p>",
@@ -24,6 +26,7 @@
             "popUpErrorDesc": "<p>Something went wrong...</p>"
         },
         "jp": {
+            "title": "Viarium — ビジネスとエンターテイメントのためのVRの連合した基盤",
             "typeEmail": "あなたの電子メールを入力します",
             "buyTokenPopUpText": "<p>12月18日までにサインアップし、<span> 100 VRM </ span>トークンを無料で入手！</p>",
             "getWpPopUpText": "<p>ホワイト新聞をとるために、どうぞ、あなたの電子メールを入力してください</p>",

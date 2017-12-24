@@ -16,16 +16,32 @@
 /* Base styles */
 @import "./base/elements";
 
+/* Adaptiv before*/
+@import "./adaptiv/before";
+
 /* Layout */
 @import "./layout/main";
 
 /* Objects */
 @import "./objects/typography";
-@import "./objects/buttons";
 @import "./objects/header";
-@import "./objects/footer";
 @import "./objects/nav";
 @import "./objects/social";
+@import "./objects/timeBox";
+@import "./objects/feedbackBlock";
+@import "./objects/footer";
+
+/* Blocks */
+@import "./blocks/partners";
+@import "./blocks/smi";
+@import "./blocks/aboutToken";
+@import "./blocks/roadmap";
+@import "./blocks/about";
+@import "./blocks/advantages";
+@import "./blocks/documents";
 
 /* Components */
 @import "./components/modal";
+
+/* Adaptiv after*/
+@import "./adaptiv/after";

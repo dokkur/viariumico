@@ -1,0 +1,66 @@
+.via-feedbackBlock {
+  display: block;
+  position: relative;
+  width: 606px;
+  height: 66px;
+  margin: 0 auto;
+
+  &-form {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-feedbackLine {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 43px;
+
+    &-input {
+      background: #fff;
+      height: 100%;
+      width: 64%;
+      display: block;
+      float: left;
+      border: 0;
+      font-size: 17px;
+      padding: 20px 30px;
+      letter-spacing: -0.13px;
+      font-weight: 400;
+      color:#000;
+    }
+
+    & .via-btn {
+      display: block;
+      float: right;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 36%;
+      background-color: #ff1329;
+      border: 0;
+      font-weight: 400;
+      font-size: 26px;
+      letter-spacing: -0.6px;
+      color: #fff;
+      outline: none;
+      border: none;
+
+      &:active {
+        outline: none;
+        border: none;
+      }
+
+      &:hover {
+        background: #51c4d8;
+      }
+
+      &.-progres {
+        background: #34acc1;
+      }
+    }
+  }
+}
