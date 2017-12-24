@@ -6,7 +6,6 @@ import postcssNext from 'postcss-cssnext';
 import postcssImport from 'postcss-import';
 import postcssExtend from 'postcss-extend';
 import postcssReporter from 'postcss-reporter';
-import StyleLintPlugin from 'stylelint-webpack-plugin';
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
@@ -68,14 +67,6 @@ module.exports = env => {
                 cacheDirectory: true,
                 plugins: ['transform-runtime']
               }
-            },
-            {
-              loader: 'eslint-loader',
-              options: {
-                cache: true,
-                emitWarning: true,
-                configFile: '.eslintrc'
-              }
             }
           ]
         },
@@ -134,7 +125,8 @@ module.exports = env => {
             {
               loader: 'pug-html-loader',
               options: {
-                exports: false
+                exports: false,
+                pretty: true
               }
             }
           ]
@@ -176,14 +168,6 @@ module.exports = env => {
       }),
 
       extractStyles,
-
-      new StyleLintPlugin({
-        configFile: '.stylelintrc',
-        context: 'src/' + stylesType,
-        files: '**/*' + stylesExtension,
-        failOnError: false,
-        quiet: true,
-      }),
 
       new CopyWebpackPlugin([
         {

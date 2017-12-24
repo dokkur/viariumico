@@ -1,0 +1,21 @@
+.via-page-documents {
+  position: relative;
+  padding-bottom: 53px;
+
+  & h1 {
+    color: #474958;
+    font-size: 43px;
+    font-weight: 800;
+    margin: 38px 0 50px 0;
+
+    & span {
+      z-index: -1;
+      opacity: 1;
+    }
+  }
+
+  &-wrap {
+    display: block;
+    position: relative;
+  }
+}

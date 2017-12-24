@@ -1,0 +1,74 @@
+.via-timeBox {
+  display: block;
+  position: relative;
+  width: 727px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  &-timeTable {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    list-style: none;
+    width: 446px;
+    margin: 0;
+    padding: 0;
+    height: 128px;
+    background-color: rgba(41, 36, 82, 0.75);
+
+    &-item {
+      display: inline-block;
+      width: 102px;
+
+      &-value {
+        display: block;
+        position: relative;
+        font-weight: 300;
+        color: #fff;
+        font-size: 65px;
+        line-height: 65px;
+        margin-top: 16px;
+
+        &:after {
+          display: block;
+          position: absolute;
+          content: ':';
+          top: -3px;
+          right: 0;
+          font-size: 61px;
+          font-weight: 600;
+          margin-right: 3px;
+        }
+      }
+
+      &-subValue {
+        display: block;
+        position: relative;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #fff;
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      &:last-of-type {
+        .via-timeBox-timeTable-item-value {
+          padding-right: 0;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  & .via-btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 19px 50px;
+    margin: 0;
+    margin-left: 29px;
+  }
+}

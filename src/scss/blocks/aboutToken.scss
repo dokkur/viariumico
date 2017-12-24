@@ -1,0 +1,113 @@
+.via-page-aboutToken {
+  position: relative;
+  background: url(/my_assets/images/aboutTokenBg.png) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  padding-top: 84px;
+  padding-bottom: 146px;
+
+  & table {
+    width: 93%;
+    border-collapse: collapse;
+
+    & tr {
+      text-align: left;
+      border-bottom: 1px solid rgba(191, 186, 241, 0.36);
+
+      & td {
+        border: none;
+        padding-top: 1px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 43px;
+      }
+    }
+  }
+}
+
+.via-whitePaper {
+  display: block;
+  position: relative;
+  margin-top: 13px;
+
+  &-form {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 53px;
+    line-height: 53px;
+    margin-top: 13px;
+  }
+
+  &-link {
+    float: left;
+    width: 52%;
+    background-color: #ffffff;
+    color: #474958;
+    text-decoration: none;
+    font-size: 19px;
+    height: 100%;
+
+    & .via-whitePaper-icon {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      width: 25px;
+      height: 33px;
+      margin-left: 25px;
+      background: url(/my_assets/images/icons/whitePaper.png) no-repeat;
+      background-size: cover;
+      background-position-x: center;
+    }
+  }
+
+  & .via-btn {
+    float: right;
+    width: 48%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    background: url(/my_assets/images/graph.png) no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    bottom: -162px;
+    left: -33px;
+    width: 622px;
+    height: 179px;
+  }
+
+  & .via-timeBox {
+    margin: 0;
+    width: 464px;
+    background-color: rgba(41, 36, 82, 0.75);
+    padding-bottom: 7px;
+
+    &-startTime {
+      display: block;
+      color: rgba(255, 255, 255, 0.57);
+      font-size: 19px;
+      font-weight: 400;
+      padding: 13px 0 6px;
+    }
+
+    &-timeTable {
+      width: 100%;
+      background: none;
+      height: 105px;
+
+      &-item {
+        &-value {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

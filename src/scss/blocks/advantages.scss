@@ -1,0 +1,42 @@
+.via-page-advantages {
+  position: relative;
+  padding-bottom: 0;
+
+  & h1 {
+    color: #474958;
+    font-size: 43px;
+    font-weight: 800;
+    margin: 84px 0 51px 0;
+
+    & span {
+      z-index: -1;
+      opacity: 1;
+    }
+  }
+
+  & .col {
+    margin-bottom: 41px;
+  }
+
+  &-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+
+    &-icon {
+      display: block;
+      position: relative;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    & p {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 19.63px;
+      color: #636785;
+    }
+  }
+}

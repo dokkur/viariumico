@@ -10,10 +10,14 @@ import config from "../../config.json";
 $(document).ready(function(){
 
   /* actual language */
+    var langItems = [{code:'en', title:'ENG', link: '/en'}, {code:'ru', title:'RUS', link: '/ru'}, {code:'jp', title:'JPN', link: '/jp'}];
     var langFromUrl = window.location.pathname.replace(/\//g,'');
     if (langFromUrl) {
       $('#langBtn').data('lang', langFromUrl);
-      $('#langBtn').text(langFromUrl.toUpperCase());
+      var langLable = langItems.filter(function(lang) {
+        return lang.code === langFromUrl
+      })[0].title;
+      $('#langBtn').text(langLable);
     }
   /**/
 
@@ -56,28 +60,28 @@ $(document).ready(function(){
   /* count down */
     var endTime = "2018-01-20T16:00:00+00:00";
     var formattedEndTime = moment(new Date(endTime)).format('YYYY/MM/DD HH:mm');
-    $('#days').countdown(formattedEndTime, function(event) {
+    $('.days').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%d'));
     });
 
-    $('#hours').countdown(formattedEndTime, function(event) {
+    $('.hours').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%H'));
     });
 
-    $('#minutes').countdown(formattedEndTime, function(event) {
+    $('.minutes').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%M'));
     });
 
-    $('#seconds').countdown(formattedEndTime, function(event) {
+    $('.seconds').countdown(formattedEndTime, function(event) {
       $(this).html(event.strftime('%S'));
     });
   /**/
 
   /* send feedback form */
-    $('#feedbackForm').submit(function(event) {
+    $('.feedbackForm').submit(function(event) {
       event.preventDefault();
-      var form = $(event.target).find("#email").serialize();
-      var email = $(event.target).find("#email").val();
+      var form = $(event.target).find(".email").serialize();
+      var email = $(event.target).find(".email").val();
       if (!email) {
         bootbox.alert({
           title: langVariables.popUpforgetEmail,
@@ -251,5 +255,24 @@ $(document).ready(function(){
           /**/
       });
     /**/
+  /**/
+
+  /* play video onclick */
+    $("video").click(function(e){
+      console.log(e);
+      if (typeof InstallTrigger === 'undefined') {
+        var clickY = (e.pageY - $(this).offset().top);
+        var height = parseFloat( $(this).height() );
+        if (clickY > 0.82*height) return;
+        this.paused ? this.play() : this.pause();
+      }
+    });
+  /**/
+
+  /* show video poster after video ended */
+      var video = $('video');
+      video.on('ended', function(e){
+        video.get(0).load();
+      });  
   /**/
 });
