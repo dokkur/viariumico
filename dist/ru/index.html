@@ -89,11 +89,12 @@
               <li class="via-timeBox-timeTable-item"><span class="seconds via-timeBox-timeTable-item-value">11</span><span class="via-timeBox-timeTable-item-subValue">секунд</span></li>
             </ul>
             <button class="buyToken via-btn">Buy token</button>
+            <button class="getWP via-btn -fullColor -mobileVisible">Get WP</button>
           </div>
-          <div class="via-feedbackBlock">
+          <div class="via-feedbackBlock -mobileHide">
             <form class="feedbackForm via-feedbackBlock-form">
               <div class="via-feedbackBlock-feedbackLine">
-                <input class="email via-feedbackBlock-feedbackLine-input" type="email" name="request[email]" placeholder="Введите ваш E-mail адрес">
+                <input class="email via-feedbackBlock-feedbackLine-input" type="email" name="request[email]" placeholder="Введите ваш E-mail адрес" data-bindPlaceholder="typeEmail">
                 <button class="via-btn -fullColor" type="submit">Get WP</button>
               </div>
             </form>
@@ -103,7 +104,7 @@
           <div class="container">
             <h1>ПАРТНЕРЫ<span>ПАРТНЕРЫ</span></h1>
             <div class="row">
-              <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              <div class="col col-lg-4 col-md-4 col-sm-7 col-xs-7">
                 <div class="via-page-partners-wrap-bg"><img src="/my_assets/images/partners/partnersBg.png"></div>
                 <div class="via-page-partners-wrap">
                   <div class="via-page-partners-wrap-outer"> 
@@ -113,7 +114,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              <div class="col col-lg-4 col-md-4 col-sm-7 col-xs-7">
                 <div class="via-page-partners-wrap-bg"><img src="/my_assets/images/partners/partnersBg2.png"></div>
                 <div class="via-page-partners-wrap">
                   <div class="via-page-partners-wrap-outer"> 
@@ -123,7 +124,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              <div class="col col-lg-4 col-md-4 col-sm-7 col-xs-7">
                 <div class="via-page-partners-wrap-bg"><img src="/my_assets/images/partners/partnersBg3.png"></div>
                 <div class="via-page-partners-wrap">
                   <div class="via-page-partners-wrap-outer"> 
@@ -135,30 +136,30 @@
               </div>
               <div class="clear"></div>
             </div>
-            <video poster="/my_assets/video/poster.jpg" preload>
-              <source src="/my_assets/video/video.mp4">
-            </video>
           </div>
+          <video poster="/my_assets/video/poster.jpg" preload>
+            <source src="/my_assets/video/video.mp4">
+          </video>
         </div>
         <div class="via-page-smi">
           <div class="container">
             <h1>СМИ О НАС<span>СМИ О НАС</span></h1>
             <div class="row">
-              <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              <div class="col col-lg-4 col-md-4 col-sm-10 col-xs-10">
                 <div class="via-page-smi-wrap"><a class="via-page-smi-wrap-image" href="#"><img src="/my_assets/images/smi/smi1.jpg"></a>
                   <div class="via-page-smi-wrap-desc"><a href="#"><span class="via-page-smi-wrap-desc-title">В России стартовал новый проект VIARIUM</span></a>
                     <p>Сегодня мы раскажем о новом стартапе, от молодой, но очень перспективной команды. Проект стартовал совсем недавно, но уже ...</p><a class="via-page-smi-wrap-desc-link" href="#">Читать статью</a>
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              <div class="col col-lg-4 col-md-4 col-sm-10 col-xs-10">
                 <div class="via-page-smi-wrap"><a class="via-page-smi-wrap-image" href="#"><img src="/my_assets/images/smi/smi2.jpg"></a>
                   <div class="via-page-smi-wrap-desc"><a href="#"><span class="via-page-smi-wrap-desc-title">Виртуальный мир не стоит на месте</span></a>
                     <p>С каждым годом все стремительнее развивается интернет и виртуальное пространство. Людей уже не удивляют покупки в ...</p><a class="via-page-smi-wrap-desc-link" href="#">Читать статью</a>
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              <div class="col col-lg-4 col-md-4 col-sm-10 col-xs-10">
                 <div class="via-page-smi-wrap"><a class="via-page-smi-wrap-image" href="#"><img src="/my_assets/images/smi/smi3.jpg"></a>
                   <div class="via-page-smi-wrap-desc"><a href="#"><span class="via-page-smi-wrap-desc-title">Интервью с сооснователем проекта VIARIUM</span></a>
                     <p>Мы решили спросить у сооснователя нового проекта, откуда появилась идея и с чего всё началось. - Здравствуйте, Алексей ...</p><a class="via-page-smi-wrap-desc-link" href="#">Читать статью</a>
@@ -228,7 +229,19 @@
             <h1>ROADMAP<span>ROADMAP</span></h1>
             <div class="via-page-roadmap-tree">
               <div class="row">
-                <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col -right col-lg-6 col-md-6 col-sm-10 col-xs-10">
+                  <div class="via-page-roadmap-wrap -first">
+                    <div class="via-page-roadmap-wrap-header">
+                      <div class="via-page-roadmap-wrap-header-age">Stone Age</div>
+                      <div class="via-page-roadmap-wrap-header-month">Фев, 2017</div>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="via-page-roadmap-wrap-body">
+                      <p>Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col -left col-lg-6 col-md-6 col-sm-10 col-xs-10">
                   <div class="via-page-roadmap-wrap -second">
                     <div class="via-page-roadmap-wrap-header">
                       <div class="via-page-roadmap-wrap-header-age">Bronze Age</div>
@@ -240,17 +253,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                  <div class="via-page-roadmap-wrap -first">
-                    <div class="via-page-roadmap-wrap-header">
-                      <div class="via-page-roadmap-wrap-header-age">Stone Age</div>
-                      <div class="via-page-roadmap-wrap-header-month">Фев, 2017</div>
-                      <div class="clear"></div>
-                    </div>
-                    <div class="via-page-roadmap-wrap-body">
-                      <p>Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.</p>
-                    </div>
-                  </div>
+                <div class="col -right col-lg-6 col-md-6 col-sm-10 col-xs-10">
                   <div class="via-page-roadmap-wrap -third">
                     <div class="via-page-roadmap-wrap-header">
                       <div class="via-page-roadmap-wrap-header-age">Stone Age</div>
@@ -343,22 +346,96 @@
           <div class="container">
             <h1>ДОКУМЕНТЫ<span>ДОКУМЕНТЫ</span></h1>
             <div class="row">
-              <div class="col-lg-5ths col-md-5ths col-sm-6 col-xs-6">
+              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc1.jpg"></div>
               </div>
-              <div class="col-lg-5ths col-md-5ths col-sm-6 col-xs-6">
+              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc2.jpg"></div>
               </div>
-              <div class="col-lg-5ths col-md-5ths col-sm-6 col-xs-6">
+              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc3.jpg"></div>
               </div>
-              <div class="col-lg-5ths col-md-5ths col-sm-6 col-xs-6">
+              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc4.jpg"></div>
               </div>
-              <div class="col-lg-5ths col-md-5ths col-sm-6 col-xs-6">
+              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc5.jpg"></div>
               </div>
               <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="via-page-employees">
+          <div class="container">
+            <h1>Сотрудники<span>Сотрудники</span></h1>
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp1.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Аексей Машкеев</span><span class="via-page-employees-wrap-desc-position">Founder</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp2.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Сергей Лукашкин</span><span class="via-page-employees-wrap-desc-position">CEO</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp3.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Александ Патушинский</span><span class="via-page-employees-wrap-desc-position">PM</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp4.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Максим Контсантинов</span><span class="via-page-employees-wrap-desc-position">WP</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp5.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Евгений Хашин</span><span class="via-page-employees-wrap-desc-position">DevOps/Smart-Contract</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp6.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Мария Лобанова</span><span class="via-page-employees-wrap-desc-position">PM</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp7.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Дарина Плутенко</span><span class="via-page-employees-wrap-desc-position">CM</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <div class="via-page-employees-wrap">
+                  <div class="via-page-employees-wrap-avatar"><img src="/my_assets/images/employees/emp8.jpg"></div>
+                  <div class="via-page-employees-wrap-desc"><span class="via-page-employees-wrap-desc-name">Гульнара Галеева</span><span class="via-page-employees-wrap-desc-position">CMO</span>
+                    <div class="via-page-employees-wrap-desc-social"><a href="#"><img src="/my_assets/images/social/emp_facebook.png"></a><a href="#"><img src="/my_assets/images/social/emp_linkedin.png"></a><a href="#"><img src="/my_assets/images/social/emp_github.png"></a>
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

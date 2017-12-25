@@ -26,6 +26,16 @@
     background-position: center;
   }
 
+  & .col {
+    &.-right {
+      float: right;
+    }
+
+    &.-left {
+      float: left;
+    }
+  }
+
   &-wrap {
     display: block;
     position: relative;

@@ -63,8 +63,12 @@
   }
 
   .via-page-header {
-    padding-top: 191px;
-    padding-bottom: 173px;
+    padding-top: 172px;
+    padding-bottom: 155px;
+
+    &-startTime {
+      font-size: 15px;
+    }
 
     &-title {
       font-size: 21px;
@@ -72,12 +76,138 @@
     }
   }
 
+  .via-timeBox {
+    width: 287px;
+    margin-top: 13px;
+
+    &-timeTable {
+      width: 255px;
+      height: 73px;
+      margin-bottom: 24px;
+
+      &-item {
+        width: 50px;
+
+        &-value {
+          font-size: 35px;
+          line-height: 22px;
+
+          &:after {
+            font-size: 39px;
+            right: -10px;
+          }
+        }
+
+        &-subValue {
+          font-size: 9px;
+          line-height: 9px;
+          padding-left: 8px;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    & .via-btn {
+      margin: 0;
+      padding: 12px 35px;
+      margin-right: 11px;
+
+      &.-fullColor {
+        margin: 0;
+        padding: 12px 43px;
+      }
+    }
+  }
+
   .via-btnWrap {
     margin-top: 22px;
   }
 
+  .via-page-partners {
+    padding-bottom: 0;
+
+    & h1 {
+      font-size: 20px;
+      margin-top: 26px;
+      margin-bottom: 12px;
+    }
+
+    & .col {
+      display: block;
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 26px;
+    }
+
+    &-wrap {
+      width: 85%;
+
+      &-bg {
+        width: 68%;
+        left: 16%;
+      }
+
+      &-outer {
+        width: 100%;
+
+        &-logo {
+          vertical-align: middle;
+
+          &-inner {
+            width: 86%;
+
+            & img {
+              width: 67%;
+            }
+          }
+        }
+      }
+    }
+
+    & video {
+      margin-top: 15px;
+      object-fit: fill;
+    }
+  }
+
+  .via-page-smi {
+    padding-bottom: 0;
+
+    & h1 {
+      font-size: 20px;
+      margin-top: 26px;
+      margin-bottom: 16px;
+    }
+
+    & .col {
+      display: block;
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 23px;
+    }
+
+    &-wrap {
+      display: block;
+
+      &-desc {
+        padding: 21px 19px;
+
+        &-title {
+          font-weight: 600;
+        }
+
+        & p {
+          font-size: 14px;
+          line-height: 16px;
+          padding: 11px 0 17px 0;
+        }
+      }
+    }
+  }
+
   .via-page-aboutToken {
     padding-top: 5px;
+    padding-bottom: 0;
 
     & h1 {
       margin-bottom: -1px;
@@ -99,10 +229,14 @@
   .via-whitePaper {
     width: 76%;
     margin: 0 auto;
-    height: 30px;
     margin-top: 15px;
     padding-bottom: 112px;
     line-height: 30px;
+
+    &-form {
+      line-height: 30px;
+      height: 30px;
+    }
 
     &-link {
       width: 54%;
@@ -124,11 +258,164 @@
     }
 
     &:after {
-      width: 277px;
+      width: 313px;
       height: 91px;
-      top: 22px;
-      left: 0px;
-    };
+      bottom: 33px;
+      left: -16px;
+    }
+
+    .via-timeBox {
+      width: 250px;
+      margin-top: 0;
+
+      &-startTime {
+        font-size: 11px;
+        padding: 2px 0 6px;
+      }
+
+      &-timeTable {
+        width: 255px;
+        height: 47px;
+        margin-bottom: 0;
+
+        &-item {
+          width: 50px;
+
+          &-value {
+            font-size: 35px;
+            line-height: 22px;
+
+            &:after {
+              font-size: 39px;
+              right: -10px;
+            }
+          }
+
+          &-subValue {
+            font-size: 9px;
+            line-height: 9px;
+            padding-left: 8px;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      & .via-btn {
+        margin: 0;
+        padding: 12px 35px;
+        margin-right: 11px;
+
+        &.-fullColor {
+          margin: 0;
+          padding: 12px 43px;
+        }
+      }
+    }
+  }
+
+  .via-page-roadmap {
+    padding-top: 0;
+    padding-bottom: 37px;
+
+    & .container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+
+    & h1 {
+      font-size: 24px;
+      margin: 15px 0 11px 0;
+      font-weight: 800;
+
+      & span {
+        font-size: 24px;
+        font-weight: 800;
+      }
+    }
+
+    &-tree {
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 0;
+      background: url(/my_assets/images/roadmapMobileBg.png) no-repeat;
+      background-position: top left;
+      background-size: 23%;
+      padding-top: 5px;
+    }
+
+    & .col {
+      width: calc(100% - 99px);
+      margin-left: 71px;
+
+      &.-right {
+        float: none;
+      }
+
+      &.-left {
+        float: none;
+      }
+    }
+
+    &-wrap {
+      &:before {
+        left: -9px;
+        width: 9px;
+        height: 31px;
+      }
+
+      &.-first {
+        margin-left: 22px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &.-second {
+        margin-left: 22px;
+        margin-top: 30px;
+
+
+        &:before {
+          display: block;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &.-third {
+        margin-left: 22px;
+        margin-top: 29px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &-header {
+        padding: 6px 42px 8px 33px;
+
+        &-age {
+          font-size: 11px;
+        }
+
+        &-month {
+          font-size: 10px;
+        }
+      }
+
+      &-body {
+        padding: 15px 27px 20px;
+        line-height: 14px;
+
+        & p {
+          font-size: 11px;
+        }
+      }
+    }
   }
 
   .via-page-about {
@@ -148,7 +435,7 @@
 
   .via-page-advantages {
     padding-top: 13px;
-    padding-bottom: 53px;
+    padding-bottom: 0;
 
     & h1 {
       font-size: 20px;
@@ -158,7 +445,7 @@
 
     & .row {
       & .col {
-
+        margin-bottom: 0;
       }
 
       & .clear {
@@ -179,6 +466,92 @@
       & p {
         font-size: 11px;
         line-height: 14.63px;
+      }
+    }
+  }
+
+  .via-page-documents {
+    padding-bottom: 9px;
+
+    & h1 {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 8px;
+
+      & span {
+        z-index: -1;
+        opacity: 1;
+      }
+    }
+
+    & .col {
+      float: none;
+      display: inline-block;
+      position: relative;
+      padding-right: 8px;
+      padding-left: 8px;
+      margin-bottom: 16px;
+
+      &:nth-child(2) {
+        width: 34.333333%;
+        padding-right: 13px;
+        padding-left: 13px;
+      }
+    }
+
+    & .col-xs-4 {
+      width: 31.333333%;
+    }
+
+    &-wrap {
+      display: block;
+      position: relative;
+    }
+  }
+
+  .via-page-employees {
+    padding-bottom: 0;
+
+    & h1 {
+      font-size: 21px;
+      margin: 0;
+      margin-bottom: 3px;
+
+      & span {
+        z-index: -1;
+        opacity: 1;
+      }
+    }
+
+    &-wrap {
+      &-desc {
+        display: block;
+
+        &-name {
+          font-size: 11px;
+          font-weight: 600;
+          margin-top: 1px;
+          min-height: 18px;
+        }
+
+        &-position {
+          font-size: 12px;
+          margin-top: 0;
+          line-height: 10px;
+        }
+
+        &-social {
+          margin-top: 5px;
+        }
+
+        & a {
+          width: 18px;
+
+          & img {
+            display: block;
+            position: relative;
+          }
+        }
       }
     }
   }
