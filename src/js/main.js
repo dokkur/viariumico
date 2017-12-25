@@ -22,11 +22,13 @@ $(document).ready(function(){
   /**/
 
   /* language vars */
-    var langVariables = config.translations[langFromUrl];
-    Object.keys(langVariables).forEach(function(langVariable) {
-      $('[data-bind="' + langVariable + '"]').html(langVariables[langVariable]);
-      $('[data-bindPlaceholder="' + langVariable + '"]').attr("placeholder", langVariables[langVariable]);
-    });
+    if (langFromUrl) {
+      var langVariables = config.translations[langFromUrl];
+      Object.keys(langVariables).forEach(function(langVariable) {
+        $('[data-bind="' + langVariable + '"]').html(langVariables[langVariable]);
+        $('[data-bindPlaceholder="' + langVariable + '"]').attr("placeholder", langVariables[langVariable]);
+      });
+    }
   /**/
 
   /* language selector */
@@ -61,7 +63,7 @@ $(document).ready(function(){
     var endTime = "2018-01-20T16:00:00+00:00";
     var formattedEndTime = moment(new Date(endTime)).format('YYYY/MM/DD HH:mm');
     $('.days').countdown(formattedEndTime, function(event) {
-      $(this).html(event.strftime('%d'));
+      $(this).html(event.strftime('%D'));
     });
 
     $('.hours').countdown(formattedEndTime, function(event) {

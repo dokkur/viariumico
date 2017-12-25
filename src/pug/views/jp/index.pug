@@ -5,37 +5,111 @@ block page-title
 
 block page-content
   .via-page-header
-    span.via-page-header-title BLOCKCHAINのビジネスのための最初のVRプラットフォーム
-    .via-btnWrap
-      button.buyToken.via-btn Buy token
-      button.getWP.via-btn.-fullColor Get WP
-    //span.via-page-header-startTime Начало пресейла 20 января 2018 в 16:00 GTM
-    //.via-timeBox
+    //- span.via-page-header-title ПЕРВАЯ ПЛАТФОРМА VR ДЛЯ БИЗНЕСА НА БЛОКЧАЙНЕ
+    //- .via-btnWrap
+    //-   button.buyToken.via-btn Buy token
+    //-   button.getWP.via-btn.-fullColor Get WP
+    span.via-page-header-startTime 会場の始まりは2018年1月20日16:00 GTMから始まります。
+    .via-timeBox
       ul.via-timeBox-timeTable
         li.via-timeBox-timeTable-item
-          span#days.via-timeBox-timeTable-item-value 14
-          span.via-timeBox-timeTable-item-subValue дней
+          span.days.via-timeBox-timeTable-item-value 14
+          span.via-timeBox-timeTable-item-subValue 日
         li.via-timeBox-timeTable-item
-          span#hours.via-timeBox-timeTable-item-value 21
-          span.via-timeBox-timeTable-item-subValue часов
+          span.hours.via-timeBox-timeTable-item-value 21
+          span.via-timeBox-timeTable-item-subValue 時間
         li.via-timeBox-timeTable-item
-          span#minutes.via-timeBox-timeTable-item-value 07
-          span.via-timeBox-timeTable-item-subValue минут
+          span.minutes.via-timeBox-timeTable-item-value 07
+          span.via-timeBox-timeTable-item-subValue 分
         li.via-timeBox-timeTable-item
-          span#seconds.via-timeBox-timeTable-item-value 11
-          span.via-timeBox-timeTable-item-subValue секунд
-    //.via-feedbackBlock
-      form#feedbackForm.via-feedbackBlock-form
+          span.seconds.via-timeBox-timeTable-item-value 11
+          span.via-timeBox-timeTable-item-subValue 秒
+      button.buyToken.via-btn Buy token
+      button.getWP.via-btn.-fullColor.-mobileVisible Get WP
+
+    .via-feedbackBlock.-mobileHide
+      form.feedbackForm.via-feedbackBlock-form
         .via-feedbackBlock-feedbackLine
-          input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="あなたの電子メールを入力します")
-          button.via-feedbackBlock-feedbackLine-btn(type="submit") 購読する
+          input.email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес" data-bindPlaceholder='typeEmail')
+          button.via-btn.-fullColor(type="submit") Get WP
+  
+  .via-page-partners
+    .container
+      h1 パートナー
+        span パートナー
+      .row
+        .col.col-lg-4.col-md-4.col-sm-7.col-xs-7
+          .via-page-partners-wrap-bg
+            img(src="/my_assets/images/partners/partnersBg.png")
+          .via-page-partners-wrap
+            .via-page-partners-wrap-outer 
+              .via-page-partners-wrap-outer-logo
+                .via-page-partners-wrap-outer-logo-inner
+                  img(src="/my_assets/images/partners/ozon.png")
+                  span.via-page-partners-wrap-outer-logo-inner-helper
+        .col.col-lg-4.col-md-4.col-sm-7.col-xs-7
+          .via-page-partners-wrap-bg
+            img(src="/my_assets/images/partners/partnersBg2.png")
+          .via-page-partners-wrap
+            .via-page-partners-wrap-outer 
+              .via-page-partners-wrap-outer-logo
+                .via-page-partners-wrap-outer-logo-inner
+                  img(src="/my_assets/images/partners/lenovo.png")
+                  span.via-page-partners-wrap-outer-logo-inner-helper
+        .col.col-lg-4.col-md-4.col-sm-7.col-xs-7
+          .via-page-partners-wrap-bg
+            img(src="/my_assets/images/partners/partnersBg3.png")
+          .via-page-partners-wrap
+            .via-page-partners-wrap-outer 
+              .via-page-partners-wrap-outer-logo
+                .via-page-partners-wrap-outer-logo-inner
+                  img(src="/my_assets/images/partners/microsoft.png")
+                  span.via-page-partners-wrap-outer-logo-inner-helper
+        .clear
+
+    video(poster="/my_assets/video/poster.jpg" preload)
+      source(src="/my_assets/video/video.mp4")
+
+  .via-page-smi
+    .container
+      h1 マスメディアについて
+        span マスメディアについて
+      .row
+        .col.col-lg-4.col-md-4.col-sm-10.col-xs-10
+          .via-page-smi-wrap
+            a(href='#').via-page-smi-wrap-image
+              img(src="/my_assets/images/smi/smi1.jpg")
+            .via-page-smi-wrap-desc
+              a(href='#')
+                span.via-page-smi-wrap-desc-title In Russia, a new project VIARIUM
+              p Today we will tell about a new startup, from a young, but very promising team. The project was launched quite recently, but already ...
+              a.via-page-smi-wrap-desc-link(href='#') Read the article
+        .col.col-lg-4.col-md-4.col-sm-10.col-xs-10
+          .via-page-smi-wrap
+            a(href='#').via-page-smi-wrap-image
+              img(src="/my_assets/images/smi/smi2.jpg")
+            .via-page-smi-wrap-desc
+              a(href='#')
+                span.via-page-smi-wrap-desc-title The virtual world does not stand still
+              p Every year, the Internet and virtual space are developing more and more rapidly. People are no longer surprised by the purchase of ...
+              a.via-page-smi-wrap-desc-link(href='#') Read the article
+        .col.col-lg-4.col-md-4.col-sm-10.col-xs-10
+          .via-page-smi-wrap
+            a(href='#').via-page-smi-wrap-image
+              img(src="/my_assets/images/smi/smi3.jpg")
+            .via-page-smi-wrap-desc
+              a(href='#')
+                span.via-page-smi-wrap-desc-title Interview with the founder of the VIARIUM project
+              p We decided to ask the co-founder of a new project, where the idea came from and where it all began. - Hello, Alexey ...
+              a.via-page-smi-wrap-desc-link(href='#') Read the article
+        .clear
   
   .via-page-aboutToken
     .container
       h1 トークン情報
         span トークン情報
       .row
-        .col-md-6
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
           table
             tr
               td トークンのタイプ：
@@ -58,13 +132,62 @@ block page-content
             tr
               td 最大目標:
               td 20 000 000 $
-        .col-md-6
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
           .via-whitePaper
             .via-whitePaper-form
-              span.via-whitePaper-link 白書
+              span.via-whitePaper-link White Paper
                 i.via-whitePaper-icon
               button.getWP.via-btn.-fullColor ドキュメントをダウンロードする
+            .via-timeBox
+              span.via-timeBox-startTime 1月4日の開始、16:00
+              ul.via-timeBox-timeTable
+                li.via-timeBox-timeTable-item
+                  span.days.via-timeBox-timeTable-item-value 14
+                  span.via-timeBox-timeTable-item-subValue 日々
+                li.via-timeBox-timeTable-item
+                  span.hours.via-timeBox-timeTable-item-value 21
+                  span.via-timeBox-timeTable-item-subValue 時間
+                li.via-timeBox-timeTable-item
+                  span.minutes.via-timeBox-timeTable-item-value 07
+                  span.via-timeBox-timeTable-item-subValue 分
+                li.via-timeBox-timeTable-item
+                  span.seconds.via-timeBox-timeTable-item-value 11
+                  span.via-timeBox-timeTable-item-subValue 秒
 
+
+  .via-page-roadmap
+    .container
+      h1 ロードマップ
+        span ロードマップ
+      .via-page-roadmap-tree
+        .row
+          .col.-right.col-lg-6.col-md-6.col-sm-10.col-xs-10
+            .via-page-roadmap-wrap.-first
+              .via-page-roadmap-wrap-header
+                .via-page-roadmap-wrap-header-age Stone Age
+                .via-page-roadmap-wrap-header-month Feb, 2017
+                .clear
+              .via-page-roadmap-wrap-body
+                p Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.
+
+          .col.-left.col-lg-6.col-md-6.col-sm-10.col-xs-10
+            .via-page-roadmap-wrap.-second
+              .via-page-roadmap-wrap-header
+                .via-page-roadmap-wrap-header-age Bronze Age
+                .via-page-roadmap-wrap-header-month Feb, 2017
+                .clear
+              .via-page-roadmap-wrap-body
+                p Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.
+
+          .col.-right.col-lg-6.col-md-6.col-sm-10.col-xs-10
+            .via-page-roadmap-wrap.-third
+              .via-page-roadmap-wrap-header
+                .via-page-roadmap-wrap-header-age Stone Age
+                .via-page-roadmap-wrap-header-month Feb, 2017
+                .clear
+              .via-page-roadmap-wrap-body
+                p Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.
+          .clear
 
   .via-page-about
     .container
@@ -124,4 +247,155 @@ block page-content
               img(src="/my_assets/images/advantages/adv8.png")
             p 世界は無限に成長する
         .clear
+
+  .via-page-documents
+    .container
+      h1 ドキュメンテーション
+        span ドキュメンテーション
+      .row
+        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+          .via-page-documents-wrap
+            img(src="/my_assets/images/documents/doc1.jpg")
+        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+          .via-page-documents-wrap
+            img(src="/my_assets/images/documents/doc2.jpg")
+        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+          .via-page-documents-wrap
+            img(src="/my_assets/images/documents/doc3.jpg")
+        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+          .via-page-documents-wrap
+            img(src="/my_assets/images/documents/doc4.jpg")
+        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+          .via-page-documents-wrap
+            img(src="/my_assets/images/documents/doc5.jpg")
+        .clear
+
+  .via-page-employees
+    .container
+      h1 従業員
+        span 従業員
+      .row
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp1.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Аексей Машкеев
+              span.via-page-employees-wrap-desc-position Founder
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp2.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Сергей Лукашкин
+              span.via-page-employees-wrap-desc-position CEO
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp3.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Александ Патушинский
+              span.via-page-employees-wrap-desc-position PM
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp4.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Максим Контсантинов
+              span.via-page-employees-wrap-desc-position WP
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+        .clear
+
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp5.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Евгений Хашин
+              span.via-page-employees-wrap-desc-position DevOps/Smart-Contract
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp6.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Мария Лобанова
+              span.via-page-employees-wrap-desc-position PM
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp7.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Дарина Плутенко
+              span.via-page-employees-wrap-desc-position CM
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+
+        .col-lg-3.col-md-3.col-sm-6.col-xs-6
+          .via-page-employees-wrap
+            .via-page-employees-wrap-avatar
+              img(src="/my_assets/images/employees/emp8.jpg")
+            .via-page-employees-wrap-desc
+              span.via-page-employees-wrap-desc-name Гульнара Галеева
+              span.via-page-employees-wrap-desc-position CMO
+              .via-page-employees-wrap-desc-social
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_facebook.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_linkedin.png")
+                a(href="#")
+                  img(src="/my_assets/images/social/emp_github.png")
+
+                .clear
+
 

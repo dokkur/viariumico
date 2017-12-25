@@ -1,0 +1,78 @@
+.via-page-employees {
+  position: relative;
+
+  & h1 {
+    color: #474958;
+    font-size: 43px;
+    font-weight: 800;
+    margin: 25px 0 50px 0;
+
+    & span {
+      z-index: -1;
+      opacity: 1;
+    }
+  }
+
+  &-wrap {
+    display: block;
+    position: relative;
+    margin-bottom: 37px;
+
+    &-avatar {
+      display: inline-block;
+      position: relative;
+      border: 3px solid rgba(134, 237, 255, 0.49);
+      border-radius: 50%;
+      padding: 5px;
+
+      & img {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: 0 8px 6px 1px rgba(18, 18, 18, 0.18);
+      }
+    }
+
+    &-desc {
+      display: block;
+      position: relative;
+
+      &-name {
+        display: block;
+        position: relative;
+        color: #474958;
+        font-size: 19px;
+        font-weight: 800;
+        margin-top: 5px;
+        min-height: 56px;
+      }
+
+      &-position {
+        display: block;
+        position: relative;
+        color: #6f707b;
+        font-size: 21px;
+        margin-top: 4px;
+        line-height: 21px;
+      }
+
+      &-social {
+        display: block;
+        position: relative;
+        margin-top: 18px;
+      }
+
+      & a {
+        display: inline-block;
+        position: relative;
+        margin: 0 8px;
+
+        & img {
+          display: block;
+          position: relative;
+        }
+      }
+    }
+  }
+}
