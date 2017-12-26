@@ -11,7 +11,16 @@
             "popUpSuccess": "Успех!",
             "popUpSuccessDesc": "<p>Ваша заявка успешно отправлена</p>",
             "popUpError": "Нам не удалось отправить вашу заявку",
-            "popUpErrorDesc": "<p>Что-то пошло не так...</p>"
+            "popUpErrorDesc": "<p>Что-то пошло не так...</p>",
+            "partnersTitle": "Партнеры",
+            "smiTitle": "СМИ",
+            "aboutTokenTitle": "Информация о токене",
+            "roadmapTitle": "Roadmap",
+            "aboutTitle": "О проекте",
+            "advantagesTitle": "Наши преимущества",
+            "documentsTitle": "Документы",
+            "employeesTitle": "Команда",
+            "contactsTitle": "Контакты"
         },
         "en": {
             "title": "Viarium — United infrastructure in VR for business and entertainment",
@@ -23,7 +32,16 @@
             "popUpSuccess": "Success!",
             "popUpSuccessDesc": "<p>Your order was successfully submitted</p>",
             "popUpError": "We were unable to submit your application",
-            "popUpErrorDesc": "<p>Something went wrong...</p>"
+            "popUpErrorDesc": "<p>Something went wrong...</p>",
+            "partnersTitle": "Partners",
+            "smiTitle": "Mass media",
+            "aboutTokenTitle": "Token information",
+            "roadmapTitle": "Roadmap",
+            "aboutTitle": "About",
+            "advantagesTitle": "Our advantages",
+            "documentsTitle": "Documents",
+            "employeesTitle": "Team",
+            "contactsTitle": "Contacts"
         },
         "jp": {
             "title": "Viarium — ビジネスとエンターテイメントのためのVRの連合した基盤",
@@ -35,7 +53,16 @@
             "popUpSuccess": "成功!",
             "popUpSuccessDesc": "<p>注文が正常に送信されました</p>",
             "popUpError": "申請書を提出できませんでした",
-            "popUpErrorDesc": "<p>何かが間違っていた...</p>"
+            "popUpErrorDesc": "<p>何かが間違っていた...</p>",
+            "partnersTitle": "パートナー",
+            "smiTitle": "マスメディア",
+            "aboutTokenTitle": "トークン情報",
+            "roadmapTitle": "ロードマップ",
+            "aboutTitle": "約",
+            "advantagesTitle": "当社の利点",
+            "documentsTitle": "ドキュメント",
+            "employeesTitle": "チーム",
+            "contactsTitle": "連絡先"
         }
     }
 }

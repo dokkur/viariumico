@@ -33,36 +33,36 @@ block page-content
           input.email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес" data-bindPlaceholder='typeEmail')
           button.via-btn.-fullColor(type="submit") Get WP
   
-  .via-page-partners
+  #partners.via-page-partners
     .container
       h1 パートナー
         span パートナー
       .row
-        .col.col-lg-4.col-md-4.col-sm-7.col-xs-7
+        .col.col-lg-4.col-md-4.col-sm-4.col-xs-7
           .via-page-partners-wrap-bg
             img(src="/my_assets/images/partners/partnersBg.png")
           .via-page-partners-wrap
             .via-page-partners-wrap-outer 
               .via-page-partners-wrap-outer-logo
-                .via-page-partners-wrap-outer-logo-inner
+                a(href='#' target='_blank').via-page-partners-wrap-outer-logo-inner
                   img(src="/my_assets/images/partners/ozon.png")
                   span.via-page-partners-wrap-outer-logo-inner-helper
-        .col.col-lg-4.col-md-4.col-sm-7.col-xs-7
+        .col.col-lg-4.col-md-4.col-sm-4.col-xs-7
           .via-page-partners-wrap-bg
             img(src="/my_assets/images/partners/partnersBg2.png")
           .via-page-partners-wrap
             .via-page-partners-wrap-outer 
               .via-page-partners-wrap-outer-logo
-                .via-page-partners-wrap-outer-logo-inner
+                a(href='#' target='_blank').via-page-partners-wrap-outer-logo-inner
                   img(src="/my_assets/images/partners/lenovo.png")
                   span.via-page-partners-wrap-outer-logo-inner-helper
-        .col.col-lg-4.col-md-4.col-sm-7.col-xs-7
+        .col.col-lg-4.col-md-4.col-sm-4.col-xs-7
           .via-page-partners-wrap-bg
             img(src="/my_assets/images/partners/partnersBg3.png")
           .via-page-partners-wrap
             .via-page-partners-wrap-outer 
               .via-page-partners-wrap-outer-logo
-                .via-page-partners-wrap-outer-logo-inner
+                a(href='#' target='_blank').via-page-partners-wrap-outer-logo-inner
                   img(src="/my_assets/images/partners/microsoft.png")
                   span.via-page-partners-wrap-outer-logo-inner-helper
         .clear
@@ -70,12 +70,12 @@ block page-content
     video(poster="/my_assets/video/poster.jpg" preload)
       source(src="/my_assets/video/video.mp4")
 
-  .via-page-smi
+  #smi.via-page-smi
     .container
       h1 マスメディアについて
         span マスメディアについて
       .row
-        .col.col-lg-4.col-md-4.col-sm-10.col-xs-10
+        .col.col-lg-4.col-md-4.col-sm-4.col-xs-10
           .via-page-smi-wrap
             a(href='#').via-page-smi-wrap-image
               img(src="/my_assets/images/smi/smi1.jpg")
@@ -84,7 +84,7 @@ block page-content
                 span.via-page-smi-wrap-desc-title In Russia, a new project VIARIUM
               p Today we will tell about a new startup, from a young, but very promising team. The project was launched quite recently, but already ...
               a.via-page-smi-wrap-desc-link(href='#') Read the article
-        .col.col-lg-4.col-md-4.col-sm-10.col-xs-10
+        .col.col-lg-4.col-md-4.col-sm-4.col-xs-10
           .via-page-smi-wrap
             a(href='#').via-page-smi-wrap-image
               img(src="/my_assets/images/smi/smi2.jpg")
@@ -93,7 +93,7 @@ block page-content
                 span.via-page-smi-wrap-desc-title The virtual world does not stand still
               p Every year, the Internet and virtual space are developing more and more rapidly. People are no longer surprised by the purchase of ...
               a.via-page-smi-wrap-desc-link(href='#') Read the article
-        .col.col-lg-4.col-md-4.col-sm-10.col-xs-10
+        .col.col-lg-4.col-md-4.col-sm-4.col-xs-10
           .via-page-smi-wrap
             a(href='#').via-page-smi-wrap-image
               img(src="/my_assets/images/smi/smi3.jpg")
@@ -104,12 +104,12 @@ block page-content
               a.via-page-smi-wrap-desc-link(href='#') Read the article
         .clear
   
-  .via-page-aboutToken
+  #aboutToken.via-page-aboutToken
     .container
       h1 トークン情報
         span トークン情報
       .row
-        .col-lg-6.col-md-6.col-sm-12.col-xs-12
+        .col-lg-6.col-md-6.col-sm-6.col-xs-12
           table
             tr
               td トークンのタイプ：
@@ -132,7 +132,7 @@ block page-content
             tr
               td 最大目標:
               td 20 000 000 $
-        .col-lg-6.col-md-6.col-sm-12.col-xs-12
+        .col-lg-6.col-md-6.col-sm-6.col-xs-12
           .via-whitePaper
             .via-whitePaper-form
               span.via-whitePaper-link White Paper
@@ -155,13 +155,13 @@ block page-content
                   span.via-timeBox-timeTable-item-subValue 秒
 
 
-  .via-page-roadmap
+  #roadmap.via-page-roadmap
     .container
       h1 ロードマップ
         span ロードマップ
       .via-page-roadmap-tree
         .row
-          .col.-right.col-lg-6.col-md-6.col-sm-10.col-xs-10
+          .col.-right.col-lg-6.col-md-6.col-sm-6.col-xs-10
             .via-page-roadmap-wrap.-first
               .via-page-roadmap-wrap-header
                 .via-page-roadmap-wrap-header-age Stone Age
@@ -170,7 +170,7 @@ block page-content
               .via-page-roadmap-wrap-body
                 p Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.
 
-          .col.-left.col-lg-6.col-md-6.col-sm-10.col-xs-10
+          .col.-left.col-lg-6.col-md-6.col-sm-6.col-xs-10
             .via-page-roadmap-wrap.-second
               .via-page-roadmap-wrap-header
                 .via-page-roadmap-wrap-header-age Bronze Age
@@ -179,7 +179,7 @@ block page-content
               .via-page-roadmap-wrap-body
                 p Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.
 
-          .col.-right.col-lg-6.col-md-6.col-sm-10.col-xs-10
+          .col.-right.col-lg-6.col-md-6.col-sm-6.col-xs-10
             .via-page-roadmap-wrap.-third
               .via-page-roadmap-wrap-header
                 .via-page-roadmap-wrap-header-age Stone Age
@@ -189,18 +189,19 @@ block page-content
                 p Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.
           .clear
 
-  .via-page-about
+  #about.via-page-about
     .container
       h1 プロジェクトについて
         span プロジェクトについて
       p Viarium – は、商品とサービスの販売のために仮想空間と拡張現実のネットワークを結合するユニークなプラットフォームです。Viariumの助けを借りて、商品とサービスの実施は、本当に可能です。VRショッピングセンターで買い物をしてください、そして、新世代でViariumプラットホームを得ている間、ショールームは新しい機会をあなたの友人、家族と全世界と共有します！
-      .via-feedbackBlock
-        form#feedbackForm.via-feedbackBlock-form
+      .via-feedbackBlock.-mobileHide
+        form.feedbackForm.via-feedbackBlock-form
           .via-feedbackBlock-feedbackLine
-            input#email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="あなたの電子メールを入力します")
+            input.email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес")
             button.via-btn.-fullColor(type="submit") Get WP
+      button.getWP.via-btn.-fullColor.-mobileVisible(type="submit") Get WP
   
-  .via-page-advantages
+  #advantages.via-page-advantages
     .container
       h1 我々の利点。
         span 我々の利点。
@@ -248,29 +249,29 @@ block page-content
             p 世界は無限に成長する
         .clear
 
-  .via-page-documents
+  #documents.via-page-documents
     .container
       h1 ドキュメンテーション
         span ドキュメンテーション
       .row
-        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+        .col.col-lg-5ths.col-md-5ths.col-sm-5ths.col-xs-4
           .via-page-documents-wrap
             img(src="/my_assets/images/documents/doc1.jpg")
-        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+        .col.col-lg-5ths.col-md-5ths.col-sm-5ths.col-xs-4
           .via-page-documents-wrap
             img(src="/my_assets/images/documents/doc2.jpg")
-        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+        .col.col-lg-5ths.col-md-5ths.col-sm-5ths.col-xs-4
           .via-page-documents-wrap
             img(src="/my_assets/images/documents/doc3.jpg")
-        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+        .col.col-lg-5ths.col-md-5ths.col-sm-5ths.col-xs-4
           .via-page-documents-wrap
             img(src="/my_assets/images/documents/doc4.jpg")
-        .col.col-lg-5ths.col-md-4.col-sm-4.col-xs-4
+        .col.col-lg-5ths.col-md-5ths.col-sm-5ths.col-xs-4
           .via-page-documents-wrap
             img(src="/my_assets/images/documents/doc5.jpg")
         .clear
 
-  .via-page-employees
+  #employees.via-page-employees
     .container
       h1 従業員
         span 従業員

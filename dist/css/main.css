@@ -952,7 +952,7 @@ p:last-child {
       display: block; } }
 
 .via-nav {
-  margin-left: 57px;
+  margin-left: 37px;
   margin-right: auto;
   font-size: 14px;
   float: left; }
@@ -1310,7 +1310,7 @@ p:last-child {
         border: none;
         padding-top: 1px;
         color: #fff;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 400;
         line-height: 43px; }
 
@@ -1363,7 +1363,7 @@ p:last-child {
     height: 179px; }
   .via-whitePaper .via-timeBox {
     margin: 0;
-    width: 464px;
+    width: 100%;
     background-color: rgba(41, 36, 82, 0.75);
     padding-bottom: 7px; }
     .via-whitePaper .via-timeBox-startTime {
@@ -1601,25 +1601,28 @@ p:last-child {
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000;
+  color: #fff;
   text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
-  opacity: .2; }
+  opacity: .2;
+  outline: none; }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
   filter: alpha(opacity=50);
-  opacity: .5; }
+  opacity: .5;
+  outline: none; }
 
 button.close {
   -webkit-appearance: none;
   padding: 0;
   cursor: pointer;
   background: transparent;
-  border: 0; }
+  border: 0;
+  outline: none; }
 
 .modal-open {
   overflow: hidden; }
@@ -1819,9 +1822,16 @@ button.close {
 */
 @media (max-width: 992px) {
   .via-page-advantages-wrap {
-    min-height: 180px; } }
+    min-height: 180px; }
+  .via-whitePaper .via-timeBox-timeTable-item {
+    width: 83px; }
+    .via-whitePaper .via-timeBox-timeTable-item-value {
+      font-size: 50px;
+      line-height: 50px; }
+      .via-whitePaper .via-timeBox-timeTable-item-value:after {
+        margin-right: -10px; } }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 20px; }
     h1 span {
@@ -1964,7 +1974,7 @@ button.close {
       bottom: 33px;
       left: -16px; }
     .via-whitePaper .via-timeBox {
-      width: 250px;
+      width: 100%;
       margin-top: 0; }
       .via-whitePaper .via-timeBox-startTime {
         font-size: 11px;
@@ -1980,7 +1990,8 @@ button.close {
             line-height: 22px; }
             .via-whitePaper .via-timeBox-timeTable-item-value:after {
               font-size: 39px;
-              right: -10px; }
+              right: -6px;
+              margin-right: 0; }
           .via-whitePaper .via-timeBox-timeTable-item-subValue {
             font-size: 9px;
             line-height: 9px;
@@ -1995,7 +2006,9 @@ button.close {
           padding: 12px 43px; }
   .via-page-roadmap {
     padding-top: 0;
-    padding-bottom: 37px; }
+    padding-bottom: 37px;
+    height: 542px;
+    width: 361px; }
     .via-page-roadmap .container {
       width: 100%;
       max-width: 100%;
@@ -2027,7 +2040,8 @@ button.close {
       width: 9px;
       height: 31px; }
     .via-page-roadmap-wrap.-first {
-      margin-left: 22px; }
+      margin-left: 22px;
+      margin-top: 2px; }
       .via-page-roadmap-wrap.-first:after {
         display: none; }
     .via-page-roadmap-wrap.-second {
@@ -2039,7 +2053,7 @@ button.close {
         display: none; }
     .via-page-roadmap-wrap.-third {
       margin-left: 22px;
-      margin-top: 29px; }
+      margin-top: 32px; }
       .via-page-roadmap-wrap.-third:after {
         display: none; }
     .via-page-roadmap-wrap-header {
