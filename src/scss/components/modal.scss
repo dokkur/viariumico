@@ -3,18 +3,20 @@
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000;
+  color: #fff;
   text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
   opacity: .2;
+  outline: none;
 }
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
   filter: alpha(opacity=50);
   opacity: .5;
+  outline: none;
 }
 button.close {
   -webkit-appearance: none;
@@ -22,6 +24,7 @@ button.close {
   cursor: pointer;
   background: transparent;
   border: 0;
+  outline: none;
 }
 .modal-open {
   overflow: hidden;

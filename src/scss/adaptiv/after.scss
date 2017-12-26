@@ -31,9 +31,22 @@
       min-height: 180px;
     }
   }
+
+  .via-whitePaper .via-timeBox-timeTable-item {
+    width: 83px;
+
+    &-value {
+      font-size: 50px;
+      line-height: 50px;
+
+      &:after {
+        margin-right: -10px;
+      }
+    }
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 20px;
 
@@ -265,7 +278,7 @@
     }
 
     .via-timeBox {
-      width: 250px;
+      width: 100%;
       margin-top: 0;
 
       &-startTime {
@@ -287,7 +300,8 @@
 
             &:after {
               font-size: 39px;
-              right: -10px;
+              right: -6px;
+              margin-right: 0;
             }
           }
 
@@ -316,6 +330,8 @@
   .via-page-roadmap {
     padding-top: 0;
     padding-bottom: 37px;
+    height: 542px;
+    width: 361px;
 
     & .container {
       width: 100%;
@@ -366,6 +382,7 @@
 
       &.-first {
         margin-left: 22px;
+        margin-top: 2px;
 
         &:after {
           display: none;
@@ -388,7 +405,7 @@
 
       &.-third {
         margin-left: 22px;
-        margin-top: 29px;
+        margin-top: 32px;
 
         &:after {
           display: none;

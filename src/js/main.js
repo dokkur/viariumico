@@ -53,6 +53,20 @@ $(document).ready(function(){
     });
   /**/
 
+  /* menu navigation */
+    var menuItem = $("nav.via-nav ul.via-nav-menu li")
+      menuItem.on('touchstart click', function(e) {
+        e.preventDefault();
+        var targetId = $(this).children()[0].hash;
+        if ($('.mobileMenu').hasClass('-opened')) {
+          $('.mobileMenu').removeClass('-opened');
+        }
+        $('html, body').animate({
+            scrollTop: $(targetId).offset().top
+        }, 500);
+    });
+  /**/
+
   /* mobile menu */
     $('.mobileMenuTriger').click(function(event) {
       $('.mobileMenu').toggleClass('-opened', '-opened');
@@ -89,7 +103,6 @@ $(document).ready(function(){
           title: langVariables.popUpforgetEmail,
           message: langVariables.forgetEmail,
           backdrop: true,
-          closeButton: false,
           callback: function(){ 
             console.log('email is empty');
           }
@@ -105,7 +118,6 @@ $(document).ready(function(){
               title: langVariables.popUpSuccess,
               message: langVariables.popUpSuccessDesc,
               backdrop: true,
-              closeButton: false,
               callback: function(){ 
                 console.log('succes');
                 $('#feedbackForm').find("#email").val('');
@@ -117,7 +129,6 @@ $(document).ready(function(){
               title: langVariables.popUpError,
               message: langVariables.popUpErrorDesc,
               backdrop: true,
-              closeButton: false,
               callback: function(){ 
                 console.log('server error');
               }
@@ -136,7 +147,6 @@ $(document).ready(function(){
             message: '<p></p>',
             backdrop: true,
             backdrop: true,
-            closeButton: false,
             onEscape: function() {
               console.log('close modal');
             },
@@ -153,7 +163,6 @@ $(document).ready(function(){
                   title: langVariables.popUpforgetEmail,
                   message: langVariables.forgetEmail,
                   backdrop: true,
-                  closeButton: false,
                   callback: function(){ 
                     console.log('email is empty');
                   }
@@ -169,7 +178,6 @@ $(document).ready(function(){
                       title: langVariables.popUpSuccess,
                       message: langVariables.popUpSuccessDesc,
                       backdrop: true,
-                      closeButton: false,
                       callback: function(){ 
                         console.log('succes');
                         $('#feedbackForm').find("#email").val('');
@@ -181,7 +189,6 @@ $(document).ready(function(){
                       title: langVariables.popUpError,
                       message: langVariables.popUpErrorDesc,
                       backdrop: true,
-                      closeButton: false,
                       callback: function(){ 
                         console.log('server error');
                       }
@@ -200,7 +207,6 @@ $(document).ready(function(){
             title: 'Get WP',
             message: '<p></p>',
             backdrop: true,
-            closeButton: false,
             onEscape: function() {
               console.log('close modal');
             },
@@ -217,7 +223,6 @@ $(document).ready(function(){
                   title: langVariables.popUpforgetEmail,
                   message: langVariables.forgetEmail,
                   backdrop: true,
-                  closeButton: false,
                   callback: function(){ 
                     console.log('email is empty');
                   }
@@ -233,7 +238,6 @@ $(document).ready(function(){
                       title: langVariables.popUpSuccess,
                       message: langVariables.popUpSuccessDesc,
                       backdrop: true,
-                      closeButton: false,
                       callback: function(){ 
                         console.log('succes');
                         $('#feedbackForm').find("#email").val('');
@@ -245,7 +249,6 @@ $(document).ready(function(){
                       title: langVariables.popUpError,
                       message: langVariables.popUpErrorDesc,
                       backdrop: true,
-                      closeButton: false,
                       callback: function(){ 
                         console.log('server error');
                       }
@@ -260,7 +263,8 @@ $(document).ready(function(){
   /**/
 
   /* play video onclick */
-    $("video").click(function(e){
+    $('video').on('touchstart click', function(e) {
+      e.preventDefault();
       console.log(e);
       if (typeof InstallTrigger === 'undefined') {
         var clickY = (e.pageY - $(this).offset().top);

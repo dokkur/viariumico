@@ -1,10 +1,23 @@
 nav.via-nav
   ul.via-nav-menu
-    - var navItems = [{title:'About', link:'/about'}, {title:'WP', link:'/wp'}, {title:'Documents', link:'/documents'}, {title:'Team', link:'/team'}, {title:'Blog', link:'/blog'}, {title:'Contacts', link:'/contacts'}, {title:'OnePage', link:'/onepage'}];
-    each navItem, index in navItems
-      if index === 2
-        li.via-nav-menu-item.-active
-          a.via-nav-menu-item-link.-active(href=navItem.link)= navItem.title
-      else
-        li.via-nav-menu-item
-          a.via-nav-menu-item-link(href=navItem.link)= navItem.title
+    //- - var navItems = [{title:'About', link:'/about'}, {title:'WP', link:'/wp'}, {title:'Documents', link:'/documents'}, {title:'Team', link:'/team'}, {title:'Blog', link:'/blog'}, {title:'Contacts', link:'/contacts'}, {title:'OnePage', link:'/onepage'}];
+    //- each navItem, index in navItems
+    //-   if index === 2
+    li.via-nav-menu-item
+      a.via-nav-menu-item-link(href='#about' data-bind='aboutTitle')
+    li.via-nav-menu-item
+      a.via-nav-menu-item-link(href='#partners' data-bind='partnersTitle')
+    li.via-nav-menu-item
+      a.via-nav-menu-item-link(href='#smi' data-bind='smiTitle') 
+    //- li.via-nav-menu-item
+    //-   a.via-nav-menu-item-link(href='#aboutToken' data-bind='aboutTokenTitle') Информация о токене
+    li.via-nav-menu-item
+      a.via-nav-menu-item-link(href='#roadmap' data-bind='roadmapTitle')
+    //- li.via-nav-menu-item
+    //-   a.via-nav-menu-item-link(href='#advantages' data-bind='advantagesTitle') Наши преимущества
+    li.via-nav-menu-item
+      a.via-nav-menu-item-link(href='#documents' data-bind='documentsTitle')
+    li.via-nav-menu-item
+      a.via-nav-menu-item-link(href='#employees' data-bind='employeesTitle')
+    li.via-nav-menu-item
+      a.via-nav-menu-item-link(href='#contacts' data-bind='contactsTitle')

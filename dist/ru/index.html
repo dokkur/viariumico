@@ -21,13 +21,13 @@
                 <div class="via-header-wrapper-menu">
                   <nav class="via-nav">
                     <ul class="via-nav-menu">
-                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/about">About</a></li>
-                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/wp">WP</a></li>
-                      <li class="via-nav-menu-item -active"><a class="via-nav-menu-item-link -active" href="/documents">Documents</a></li>
-                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/team">Team</a></li>
-                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/blog">Blog</a></li>
-                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/contacts">Contacts</a></li>
-                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/onepage">OnePage</a></li>
+                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#about" data-bind="aboutTitle"></a></li>
+                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#partners" data-bind="partnersTitle"></a></li>
+                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#smi" data-bind="smiTitle"> </a></li>
+                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#roadmap" data-bind="roadmapTitle"></a></li>
+                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#documents" data-bind="documentsTitle"></a></li>
+                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#employees" data-bind="employeesTitle"></a></li>
+                      <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#contacts" data-bind="contactsTitle"></a></li>
                     </ul>
                   </nav>
                   <div class="via-languageSelector">
@@ -55,13 +55,13 @@
                     <div class="clear"></div>
                     <nav class="via-nav">
                       <ul class="via-nav-menu">
-                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/about">About</a></li>
-                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/wp">WP</a></li>
-                        <li class="via-nav-menu-item -active"><a class="via-nav-menu-item-link -active" href="/documents">Documents</a></li>
-                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/team">Team</a></li>
-                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/blog">Blog</a></li>
-                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/contacts">Contacts</a></li>
-                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="/onepage">OnePage</a></li>
+                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#about" data-bind="aboutTitle"></a></li>
+                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#partners" data-bind="partnersTitle"></a></li>
+                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#smi" data-bind="smiTitle"> </a></li>
+                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#roadmap" data-bind="roadmapTitle"></a></li>
+                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#documents" data-bind="documentsTitle"></a></li>
+                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#employees" data-bind="employeesTitle"></a></li>
+                        <li class="via-nav-menu-item"><a class="via-nav-menu-item-link" href="#contacts" data-bind="contactsTitle"></a></li>
                       </ul>
                     </nav>
                     <ul class="via-languageSelector-lang-langPanel-inner">
@@ -100,37 +100,31 @@
             </form>
           </div>
         </div>
-        <div class="via-page-partners">
+        <div class="via-page-partners" id="partners">
           <div class="container">
-            <h1>ПАРТНЕРЫ<span>ПАРТНЕРЫ</span></h1>
+            <h1>Партнеры<span>Партнеры</span></h1>
             <div class="row">
-              <div class="col col-lg-4 col-md-4 col-sm-7 col-xs-7">
+              <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-7">
                 <div class="via-page-partners-wrap-bg"><img src="/my_assets/images/partners/partnersBg.png"></div>
                 <div class="via-page-partners-wrap">
                   <div class="via-page-partners-wrap-outer"> 
-                    <div class="via-page-partners-wrap-outer-logo">
-                      <div class="via-page-partners-wrap-outer-logo-inner"><img src="/my_assets/images/partners/ozon.png"><span class="via-page-partners-wrap-outer-logo-inner-helper"></span></div>
-                    </div>
+                    <div class="via-page-partners-wrap-outer-logo"><a class="via-page-partners-wrap-outer-logo-inner" href="#" target="_blank"><img src="/my_assets/images/partners/ozon.png"><span class="via-page-partners-wrap-outer-logo-inner-helper"></span></a></div>
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-7 col-xs-7">
+              <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-7">
                 <div class="via-page-partners-wrap-bg"><img src="/my_assets/images/partners/partnersBg2.png"></div>
                 <div class="via-page-partners-wrap">
                   <div class="via-page-partners-wrap-outer"> 
-                    <div class="via-page-partners-wrap-outer-logo">
-                      <div class="via-page-partners-wrap-outer-logo-inner"><img src="/my_assets/images/partners/lenovo.png"><span class="via-page-partners-wrap-outer-logo-inner-helper"></span></div>
-                    </div>
+                    <div class="via-page-partners-wrap-outer-logo"><a class="via-page-partners-wrap-outer-logo-inner" href="#" target="_blank"><img src="/my_assets/images/partners/lenovo.png"><span class="via-page-partners-wrap-outer-logo-inner-helper"></span></a></div>
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-7 col-xs-7">
+              <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-7">
                 <div class="via-page-partners-wrap-bg"><img src="/my_assets/images/partners/partnersBg3.png"></div>
                 <div class="via-page-partners-wrap">
                   <div class="via-page-partners-wrap-outer"> 
-                    <div class="via-page-partners-wrap-outer-logo">
-                      <div class="via-page-partners-wrap-outer-logo-inner"><img src="/my_assets/images/partners/microsoft.png"><span class="via-page-partners-wrap-outer-logo-inner-helper"></span></div>
-                    </div>
+                    <div class="via-page-partners-wrap-outer-logo"><a class="via-page-partners-wrap-outer-logo-inner" href="#" target="_blank"><img src="/my_assets/images/partners/microsoft.png"><span class="via-page-partners-wrap-outer-logo-inner-helper"></span></a></div>
                   </div>
                 </div>
               </div>
@@ -141,25 +135,25 @@
             <source src="/my_assets/video/video.mp4">
           </video>
         </div>
-        <div class="via-page-smi">
+        <div class="via-page-smi" id="smi">
           <div class="container">
-            <h1>СМИ О НАС<span>СМИ О НАС</span></h1>
+            <h1>Сми о нас<span>Сми о нас</span></h1>
             <div class="row">
-              <div class="col col-lg-4 col-md-4 col-sm-10 col-xs-10">
+              <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-10">
                 <div class="via-page-smi-wrap"><a class="via-page-smi-wrap-image" href="#"><img src="/my_assets/images/smi/smi1.jpg"></a>
                   <div class="via-page-smi-wrap-desc"><a href="#"><span class="via-page-smi-wrap-desc-title">В России стартовал новый проект VIARIUM</span></a>
                     <p>Сегодня мы раскажем о новом стартапе, от молодой, но очень перспективной команды. Проект стартовал совсем недавно, но уже ...</p><a class="via-page-smi-wrap-desc-link" href="#">Читать статью</a>
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-10 col-xs-10">
+              <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-10">
                 <div class="via-page-smi-wrap"><a class="via-page-smi-wrap-image" href="#"><img src="/my_assets/images/smi/smi2.jpg"></a>
                   <div class="via-page-smi-wrap-desc"><a href="#"><span class="via-page-smi-wrap-desc-title">Виртуальный мир не стоит на месте</span></a>
                     <p>С каждым годом все стремительнее развивается интернет и виртуальное пространство. Людей уже не удивляют покупки в ...</p><a class="via-page-smi-wrap-desc-link" href="#">Читать статью</a>
                   </div>
                 </div>
               </div>
-              <div class="col col-lg-4 col-md-4 col-sm-10 col-xs-10">
+              <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-10">
                 <div class="via-page-smi-wrap"><a class="via-page-smi-wrap-image" href="#"><img src="/my_assets/images/smi/smi3.jpg"></a>
                   <div class="via-page-smi-wrap-desc"><a href="#"><span class="via-page-smi-wrap-desc-title">Интервью с сооснователем проекта VIARIUM</span></a>
                     <p>Мы решили спросить у сооснователя нового проекта, откуда появилась идея и с чего всё началось. - Здравствуйте, Алексей ...</p><a class="via-page-smi-wrap-desc-link" href="#">Читать статью</a>
@@ -170,11 +164,11 @@
             </div>
           </div>
         </div>
-        <div class="via-page-aboutToken">
+        <div class="via-page-aboutToken" id="aboutToken">
           <div class="container">
-            <h1>ИНФОРМАЦИЯ О ТОКЕНЕ<span>ИНФОРМАЦИЯ О ТОКЕНЕ</span></h1>
+            <h1>Информация о токене<span>Информация о токене</span></h1>
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <table>
                   <tr>
                     <td>Тип токена:</td>
@@ -206,7 +200,7 @@
                   </tr>
                 </table>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="via-whitePaper">
                   <div class="via-whitePaper-form"><span class="via-whitePaper-link">White Paper<i class="via-whitePaper-icon"></i></span>
                     <button class="getWP via-btn -fullColor">CКАЧАТЬ ДОКУМЕНТ</button>
@@ -224,12 +218,12 @@
             </div>
           </div>
         </div>
-        <div class="via-page-roadmap">
+        <div class="via-page-roadmap" id="roadmap">
           <div class="container">
-            <h1>ROADMAP<span>ROADMAP</span></h1>
+            <h1>Roadmap<span>Roadmap</span></h1>
             <div class="via-page-roadmap-tree">
               <div class="row">
-                <div class="col -right col-lg-6 col-md-6 col-sm-10 col-xs-10">
+                <div class="col -right col-lg-6 col-md-6 col-sm-6 col-xs-10">
                   <div class="via-page-roadmap-wrap -first">
                     <div class="via-page-roadmap-wrap-header">
                       <div class="via-page-roadmap-wrap-header-age">Stone Age</div>
@@ -241,7 +235,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col -left col-lg-6 col-md-6 col-sm-10 col-xs-10">
+                <div class="col -left col-lg-6 col-md-6 col-sm-6 col-xs-10">
                   <div class="via-page-roadmap-wrap -second">
                     <div class="via-page-roadmap-wrap-header">
                       <div class="via-page-roadmap-wrap-header-age">Bronze Age</div>
@@ -253,7 +247,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col -right col-lg-6 col-md-6 col-sm-10 col-xs-10">
+                <div class="col -right col-lg-6 col-md-6 col-sm-6 col-xs-10">
                   <div class="via-page-roadmap-wrap -third">
                     <div class="via-page-roadmap-wrap-header">
                       <div class="via-page-roadmap-wrap-header-age">Stone Age</div>
@@ -270,7 +264,7 @@
             </div>
           </div>
         </div>
-        <div class="via-page-about">
+        <div class="via-page-about" id="about">
           <div class="container">
             <h1>О проекте<span>О проекте</span></h1>
             <p>Viarium – это уникальная платформа, объединяющая в себе сеть виртуального пространства и дополненной реальности для продажи товаров и услуг. С помощью Viarium становится возможность реализации своих товаров и услуг. Совершайте покупки в торговых центрах и шоурумах VR, делитесь новыми возможностями с друзьями, семьей и всем миром, получая при этом доход на торговой площадке нового поколения Viarium!</p>
@@ -285,7 +279,7 @@
             <button class="getWP via-btn -fullColor -mobileVisible" type="submit">Get WP</button>
           </div>
         </div>
-        <div class="via-page-advantages">
+        <div class="via-page-advantages" id="advantages">
           <div class="container">
             <h1>Наши преимущества<span>Наши преимущества</span></h1>
             <div class="row">
@@ -342,30 +336,30 @@
             </div>
           </div>
         </div>
-        <div class="via-page-documents">
+        <div class="via-page-documents" id="documents">
           <div class="container">
-            <h1>ДОКУМЕНТЫ<span>ДОКУМЕНТЫ</span></h1>
+            <h1>Документы<span>Документы</span></h1>
             <div class="row">
-              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
+              <div class="col col-lg-5ths col-md-5ths col-sm-5ths col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc1.jpg"></div>
               </div>
-              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
+              <div class="col col-lg-5ths col-md-5ths col-sm-5ths col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc2.jpg"></div>
               </div>
-              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
+              <div class="col col-lg-5ths col-md-5ths col-sm-5ths col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc3.jpg"></div>
               </div>
-              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
+              <div class="col col-lg-5ths col-md-5ths col-sm-5ths col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc4.jpg"></div>
               </div>
-              <div class="col col-lg-5ths col-md-4 col-sm-4 col-xs-4">
+              <div class="col col-lg-5ths col-md-5ths col-sm-5ths col-xs-4">
                 <div class="via-page-documents-wrap"><img src="/my_assets/images/documents/doc5.jpg"></div>
               </div>
               <div class="clear"></div>
             </div>
           </div>
         </div>
-        <div class="via-page-employees">
+        <div class="via-page-employees" id="employees">
           <div class="container">
             <h1>Сотрудники<span>Сотрудники</span></h1>
             <div class="row">
@@ -440,12 +434,12 @@
           </div>
         </div>
       </div>
-      <footer class="via-footer">
+      <footer class="via-footer" id="contacts">
         <div class="container">
           <div class="via-footer-wrapper">
             <div class="via-footer-wrapper-logo"><a href="/"><img src="/my_assets/images/footerLogo.png"></a></div>
             <div class="via-footer-wrapper-contuctUs"><span class="via-footer-wrapper-contuctUs-span">contact us: <a href="mailto: info@viarium.io">info@viarium.io</a></span>
-              <div class="via-social"><a href="https://www.facebook.com/ViariumPlatform/"><img src="/my_assets/images/social/facebook.png"></a><a href="https://www.instagram.com/viariumico/"><img src="/my_assets/images/social/instagram.png"></a><a href="https://twitter.com/VIariumPlatform"><img src="/my_assets/images/social/tweeter.png"></a><a href="https://medium.com/@VIariumICO"><img src="/my_assets/images/social/medium.png"></a><a href="https://vk.com/public157954990"><img src="/my_assets/images/social/vk.png"></a>
+              <div class="via-social"><a href="https://www.facebook.com/ViariumPlatform/" target="_blank"><img src="/my_assets/images/social/facebook.png"></a><a href="https://www.instagram.com/viariumico/" target="_blank"><img src="/my_assets/images/social/instagram.png"></a><a href="https://twitter.com/VIariumPlatform" target="_blank"><img src="/my_assets/images/social/tweeter.png"></a><a href="https://medium.com/@VIariumICO" target="_blank"><img src="/my_assets/images/social/medium.png"></a><a href="https://vk.com/public157954990" target="_blank"><img src="/my_assets/images/social/vk.png"></a>
                 <div class="clear"></div>
               </div>
             </div>
