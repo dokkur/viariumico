@@ -38,7 +38,8 @@ module.exports = env => {
     context: PATHS.src,
 
     entry: {
-      main: './app.js'
+      main: './app.js',
+      dashboard: './dashboard.js'
     },
 
     output: {
@@ -131,6 +132,10 @@ module.exports = env => {
             }
           ]
         },
+        {
+          test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
+          use: 'file-loader?name=my_assets/[name].[ext]'
+        },
       ]
     },
 
@@ -164,7 +169,25 @@ module.exports = env => {
       new HtmlWebpackPlugin({
         filename: 'jp/index.html',
         template: path.resolve(PATHS.views, 'jp/index.pug'),
-        minfy: false
+        minify: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'dashboard/login.html',
+        template: path.resolve(PATHS.views, 'dashboard/login.pug'),
+        minify: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'dashboard/registration.html',
+        template: path.resolve(PATHS.views, 'dashboard/registration.pug'),
+        minify: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'dashboard/profile.html',
+        template: path.resolve(PATHS.views, 'dashboard/profile.pug'),
+        minify: false
       }),
 
       extractStyles,

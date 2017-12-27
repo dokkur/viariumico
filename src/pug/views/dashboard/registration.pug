@@ -1,0 +1,53 @@
+extends ../../layout/base
+
+block head-extra
+  script(src='https://www.google.com/recaptcha/api.js', async='async', defer='defer')
+
+block page-title
+  title Registration
+
+block page-content
+  .vie-page-dashboard.via-page-registration
+    .container
+      .jumbotron
+        h1 ICO Registration
+        .lead
+          span Already have an account?
+          = ' '
+          a(href='./login.html') Login
+      form.via-form.via-form-registration(action='.', method='post', enctype='application/x-www-form-urlencoded', autocapitalize='off', name='view-form-registration', id='view-form-registration')
+        .form-group.form-group-required.row
+          label.col-form-label.col-md-3(for='email', title='Email address is required') Email address
+          input.form-control.form-control-lg.col-md-9(type='email', name='email', id='email', required='required', autocomplete='email', autofocus='autofocus', placeholder='me@example.com', title='Please fill in your email')
+        .form-group.form-group-required.row
+          label.col-form-label.col-md-3(for='username', title='Username is required') Username
+          input.form-control.form-control-lg.col-md-9(type='text', name='username', id='username', required='required', placeholder='iamsogood', title='Please fill in your desired username')
+        .form-group.form-group-required.row
+          label.col-form-label.col-md-3(for='password', title='Password is required') Password
+          input.form-control.form-control-lg(type='password', name='password', id='password', required='required', title='Please fill in desired password')
+        .form-group.row
+          label.col-form-label.col-md-3(for='country') Country (Optional)
+          select.form-control.form-control-lg.col-md-9(name='country', id='country', autocomplete='shipping country')
+        .form-group.row
+          label.col-form-label.col-md-3(for='phone') Phone Number (Optional)
+          input.form-control.form-control-lg.col-md-9(type='tel', name='phone', id='phone', autocomplete='tel', placeholder='(421) 000-00-00')
+        .form-group.row
+          label.col-form-label.col-form-label-left.offset-md-3.col-md-9(for='politically-exposed-yes') Are you, or have you ever been, a Politically Exposed Person?*
+          .form-check-inline.offset-md-3.col-md-9
+            label
+              input(type='radio', name='politically-exposed', id='politically-exposed-yes', value='yes')
+              ='Yes'
+            label
+              input(type='radio', name='politically-exposed', id='politically-exposed-no', value='no' checked='checked')
+              ='No'
+        .form-group.row
+          label.col-form-label.col-form-label-left.offset-md-3.col-md-9(for='china-or-us-resident-yes') Are you a People’s Republic of China or U.S Resident or have you got U.S Citizonship?
+          .form-check-inline.form-control-lg.col-md-9
+            label
+              input(type='radio', name='china-or-us-resident', id='china-or-us-resident-yes', value='yes')
+              ='Yes'
+            label
+              input(type='radio', name='china-or-us-resident', id='china-or-us-resident-no', value='no' checked='checked')
+              ='No'
+        .g-recaptcha(data-sitekey="6LeDy8kSAAAAAALG4TXyIfUYO9ZovSIfhfSsVLie")
+        button.btn.btn-primary(type="submit") Open My Account Now

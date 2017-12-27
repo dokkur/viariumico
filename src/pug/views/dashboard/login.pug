@@ -1,0 +1,26 @@
+extends ../../layout/base
+
+block head-extra
+  script(src='https://www.google.com/recaptcha/api.js', async='async', defer='defer')
+
+block page-title
+  title Login
+
+block page-content
+  .vie-page-dashboard.via-page-login
+    .container
+      .jumbotron
+        h1 ICO Login
+        .lead
+          span Do not have an account?
+          = ' '
+          a(href='./registration.html') Register
+      form.via-form.via-form-login(action='.', method='post', enctype='application/x-www-form-urlencoded', autocapitalize='off', name='view-form-registration', id='view-form-registration')
+        .form-group.form-group-required.row
+          label.col-form-label.col-md-3(for='username', title='Username is required') Username
+          input.form-control.form-control-lg.col-md-9(type='text', name='username', id='username', required='required', placeholder='iamsogood', title='Please fill in your username', autocapitalize='off')
+        .form-group.form-group-required.row
+          label.col-form-label.col-md-3(for='password', title='Password is required') Password
+          input.form-control.form-control-lg.col-md-9(type='password', name='password', id='password', required='required', title='Please fill in password')
+        .g-recaptcha(data-sitekey="6LeDy8kSAAAAAALG4TXyIfUYO9ZovSIfhfSsVLie")
+        button.btn.btn-primary(type="submit") Login

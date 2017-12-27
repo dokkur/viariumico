@@ -1,0 +1,93 @@
+$main-color: #474958;
+$main-font-size: 18px;
+
+.vie-page-dashboard {
+  margin-top: 122px;
+}
+
+.via-page-registration {
+  a {
+    color: #1798d6;
+    text-decoration: underline;
+  }
+}
+
+.via-form {
+  margin: 40px;
+  color: $main-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+.jumbotron {
+  padding: 10px;
+
+  h1 {
+    color: $main-color;
+    font-size: 40px;
+    position: relative;
+  }
+  h1:after {
+    position: absolute;
+    content: 'ICO Registration';
+    color: #f1f4f6;
+    font-size: 56px;
+  }
+  .lead {
+    font-weight: 600;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    font-size: $main-font-size;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  input {
+    font-weight: 600;
+    color: $main-color;
+  }
+
+  input[type='radio'] {
+    border: 1px solid #939393;
+    border-radius: 100%;
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    margin: 7px;
+
+    &:checked {
+      background-color: #86edff;
+    }
+  }
+
+  .col-form-label-left {
+    text-align: left;
+  }
+}
+
+.form-control {
+  background-color: #dbdee4;
+  color: $main-color;
+  border: 1px transparent solid;
+  min-height: 2.5em;
+  font-size: $main-font-size;
+  padding: 5px 10px;
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px #dbdee4 solid;
+  border-radius: 0;
+}
+
+.form-group-required {
+  label:after {
+    content: '*';
+    margin: 0 0.3rem;
+  }
+}
