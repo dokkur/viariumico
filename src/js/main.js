@@ -111,7 +111,7 @@ $(document).ready(function(){
       }
       $.ajax({
           type: "POST",
-          url: "https://worldwifi.herokuapp.com/create_request",
+          url: "/create_request",
           data: form,
           success: function () {
               bootbox.alert({
@@ -171,7 +171,7 @@ $(document).ready(function(){
               }
               $.ajax({
                   type: "POST",
-                  url: "https://worldwifi.herokuapp.com/create_request",
+                  url: "/create_request",
                   data: form,
                   success: function () {
                     bootbox.alert({
@@ -231,7 +231,7 @@ $(document).ready(function(){
               }
               $.ajax({
                   type: "POST",
-                  url: "https://worldwifi.herokuapp.com/create_request",
+                  url: "/create_request",
                   data: form,
                   success: function () {
                       bootbox.alert({
