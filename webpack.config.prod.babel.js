@@ -10,6 +10,14 @@ import postcssReporter from 'postcss-reporter';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
 import HtmlWebpackExcludeAssetsPlugin from 'html-webpack-exclude-assets-plugin';
 
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  js: path.join(__dirname, 'src/js'),
+  static: path.join(__dirname, 'src/static'),
+  views: path.join(__dirname, 'src/pug/views'),
+  dist: path.join(__dirname, 'dist'),
+};
+
 const extractStyles = new ExtractTextPlugin({ filename: 'css/[name].css' });
 
 const supportedBrowsers = [
@@ -185,12 +193,29 @@ module.exports = env => {
       }),
 
       new webpack.optimize.CommonsChunkPlugin({
-        name: "common"
+        name: 'common'
       }),
 
       new HtmlWebpackPlugin({
         template: 'pug/index.pug',
         excludeAssets: [/dashboard\.(css|js)/]
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'dashboard/login/index.html',
+        template: path.resolve(PATHS.views, 'dashboard/login.pug'),
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'dashboard/registration/index.html',
+        template: path.resolve(PATHS.views, 'dashboard/registration.pug'),
+        minify: false
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'dashboard/profile/index.html',
+        template: path.resolve(PATHS.views, 'dashboard/profile.pug'),
+        minify: false
       }),
 
       new HtmlWebpackExcludeAssetsPlugin(),
