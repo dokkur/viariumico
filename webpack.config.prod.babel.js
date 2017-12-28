@@ -8,6 +8,7 @@ import postcssImport from 'postcss-import';
 import postcssExtend from 'postcss-extend';
 import postcssReporter from 'postcss-reporter';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
+import HtmlWebpackExcludeAssetsPlugin from 'html-webpack-exclude-assets-plugin';
 
 const extractStyles = new ExtractTextPlugin({ filename: 'css/[name].css' });
 
@@ -40,7 +41,8 @@ module.exports = env => {
     context: path.resolve(__dirname, 'src'),
 
     entry: {
-      main: './app.js'
+      main: './app.js',
+      dashboard: './dashboard.js',
     },
 
     output: {
@@ -187,8 +189,11 @@ module.exports = env => {
       }),
 
       new HtmlWebpackPlugin({
-        template: 'pug/index.pug'
+        template: 'pug/index.pug',
+        excludeAssets: [/dashboard\.(css|js)/]
       }),
+
+      new HtmlWebpackExcludeAssetsPlugin(),
 
       extractStyles,
 
