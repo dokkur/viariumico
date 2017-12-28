@@ -3,15 +3,127 @@ extends ../../layout/base
 block page-title
   title Profile
 
+block header
+  header.via-header
+    .via-header-wrapper
+      .clearfix
+        .container
+          .via-header-wrapper-logo
+            a(href='/')
+              img(src='/my_assets/images/logo.png')
+          .via-header-wrapper-rightSide.via-header-wrapper-rightSide-profile
+            .via-header-account
+              span.via-header-account-name Konstantin
+              a(href='/dashboard/profile').via-header-account-email 379avramchenko@gmail.com
+            a(href='/dashboard/login').btn.via-btn-logout Logout
+            .clear
+          .mobileMenuTriger.via-header-wrapper-mobileMenuTriger
+            span
+            span
+            span
+
+          .mobileMenu.via-header-wrapper-mobileMenu
+            .container
+              .via-header-wrapper-mobileMenu-logo
+                a(href='/')
+                  img(src="/my_assets/images/logo.png")
+
+              .via-header-wrapper-rightSide
+                .mobileMenuTriger.via-header-wrapper-mobileMenuTriger.-open
+                  span
+                  span
+                  span
+              .clear
+          .clear
+
 block page-content
   .vie-page-dashboard.via-page-dashboard-profile
     .container
       .via-balance.row
-        .via-balance-current.col-md-3
-          h2 You have:
-        .via-balance-calculator.col-md-9
-          h2 Calculate:
-      .jumbotron
+        .via-balance-card.via-balance-current.col-lg-4
+          .via-balance-card-wrapper
+            .via-balance-col-wrapper
+              .jumbotron
+                h1 You have:
+                .col-lg-12
+                  .via-balance-col-wrapper
+                    .via-balance-amount
+                      .via-balance-amount-number 223.3
+                      .via-balance-amount-currency VRM
+                    p.hint
+                      | The tokens balance is updated immediately once
+                      | your transactions are confirmed in blockchains.
+                      | You will be able to withdraw your tokens once the
+                      | Token Sale is completed.
+        .via-balance-card.via-balance-calculator.col-lg-8
+          .via-balance-card-wrapper
+            form.jumbotron
+              h1 Calculate:
+              .via-balance-col.col-lg-6
+                .via-balance-col-wrapper
+                  .via-balance-amount
+                    .via-balance-amount-number 223.3
+                    .via-balance-amount-currency VRM
+                  .form-group
+                    label
+                      input(type='radio', name='via-calculator-currency', id='via-calculator-vrm', checked='checked')
+                      span.label-text VRM
+                    label
+                      input(type='radio', name='via-calculator-currency', id='via-calculator-ltc')
+                      span.label-text LTC
+                  .form-group
+                    label
+                      input(type='radio', name='via-calculator-currency', id='via-calculator-btc')
+                      span.label-text BTC
+                    label
+                      input(type='radio', name='via-calculator-currency', id='via-calculator-eth')
+                      span.label-text ETH
+                .arrow-right
+              .via-balance-col.col-lg-6
+                .via-balance-col-wrapper
+                  .via-balance-amount
+                    .via-balance-amount-number 3.8
+                    .via-balance-amount-currency BTC
+                  p.hint
+                    | By the exchange rate 3.246757/1 based on 
+                    a(href='http://cryptocompare.com') cryptocompare.com
+                    |  API and
+                    | the following formula: 1/(700*k) where k=1-(discount/100).
+      .via-instruction.jumbotron
         h1 Instruction
-        .lead
-          span To Buy MTRc please transfer ETH or BTC to the addresses shown below:
+        p To Buy MTRc please transfer ETH or BTC to the addresses shown below:
+      .via-addresses.list-group
+        .via-address
+          .col-md-6
+            label(for='via-field-btc') Your address for BTC investments:
+          .col-md-6
+            .via-address-field.input-group
+              input(id='via-field-btc', readonly='readonly', value='1LexmSKxEhmGuXpFZH7EheXhmcXXmqdPZ1')
+              span.input-group-addon
+                button.via-copy-btn('data-clipboard-target'='#via-field-btc') Copy
+            .via-address-balance
+              span.via-address-balance-label Balance:
+              span.via-address-balance-value 0.0
+        .via-address
+          .col-md-6
+            label(for='via-field-eth') Your address for Ethereum investments:
+          .col-md-6
+            .via-address-field.input-group
+              input(id='via-field-eth', readonly='readonly', value='1LexmSKxEhmGuXpFZH7EheXhmcXXmqdPZ2')
+              span.input-group-addon
+                button.via-copy-btn('data-clipboard-target'='#via-field-eth') Copy
+            .via-address-balance
+              span.via-address-balance-label Balance:
+              span.via-address-balance-value 0.0
+        .via-address
+          .col-md-6
+            label(for='via-field-vrm') Your address for VRM investments:
+          .col-md-6
+            .via-address-field.input-group
+              input(id='via-field-vrm', readonly='readonly', value='1LexmSKxEhmGuXpFZH7EheXhmcXXmqdPZ3')
+              span.input-group-addon
+                button.via-copy-btn('data-clipboard-target'='#via-field-vrm') Copy
+            .via-address-balance
+              span.via-address-balance-label Balance:
+              span.via-address-balance-value 0.0
+      a.btn.btn-lg.via-btn-instructions Detailed instructions

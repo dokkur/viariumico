@@ -1,0 +1,30 @@
+/**
+ * @author Arthur Chafonov <actuosus@gmail.com>
+ * @fileoverview
+ * @version 1.0.0
+ * @module
+ */
+
+import 'intl-tel-input';
+import 'intl-tel-input/build/css/intlTelInput.css';
+
+import $ from 'jquery';
+
+export default function register() {
+  const countryData = $.fn.intlTelInput.getCountryData();
+  const $phoneInput = $('#phone');
+  const $countryDropDown = $('#country');
+
+  $.each(countryData, function(i, country) {
+    $countryDropDown
+      .append($('<option></option>')
+        .attr('value', country.iso2)
+        .text(country.name));
+  });
+
+  $countryDropDown.change(function() {
+    $phoneInput.intlTelInput('setCountry', $(this).val());
+  });
+
+  $phoneInput.intlTelInput();
+}

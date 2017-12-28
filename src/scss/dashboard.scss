@@ -1,14 +1,76 @@
 $main-color: #474958;
 $main-font-size: 18px;
+$border-color: #dbdee4;
+$primary-color: #86edff;
+$hint-color: #bbbdca;
+$link-color: #1798d6;
 
-.vie-page-dashboard {
-  margin-top: 122px;
+/* Sticky footer */
+//html, body {
+//  min-height: 100%;
+//}
+//
+//.via-page {
+//  height: 100%;
+//  display: flex;
+//  flex-direction: column;
+//}
+//
+//.via-content {
+//  flex: 1 0 auto;
+//}
+
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+
+  border-left: 23px solid #bcbdca;
 }
 
+.btn.btn-primary {
+  border-radius: 0;
+  border: 0;
+  font-size: 26px;
+  margin: 15px 0 15px 0;
+}
+
+
+.vie-page-dashboard {
+  color: $main-color;
+  margin-top: 122px;
+  margin-bottom: 40px;
+}
+
+.registration,
+.login {
+  .via-header-wrapper {
+    margin-top: 20px;
+  }
+
+  .via-header-wrapper-logo {
+    margin: 0 auto;
+    float: none;
+    width: 150px;
+  }
+}
+
+
 .via-page-registration {
-  a {
-    color: #1798d6;
-    text-decoration: underline;
+  .jumbotron h1:after {
+    content: 'ICO Registration';
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+.via-page-login {
+  .jumbotron h1:after {
+    content: 'ICO Login';
   }
 }
 
@@ -20,20 +82,30 @@ $main-font-size: 18px;
 
 .jumbotron {
   padding: 10px;
+  background-color: transparent !important;
 
   h1 {
     color: $main-color;
     font-size: 40px;
     position: relative;
+    margin-bottom: 40px;
+    font-weight: 600;
   }
   h1:after {
     position: absolute;
-    content: 'ICO Registration';
     color: #f1f4f6;
     font-size: 56px;
+    font-weight: 600;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 10px;
   }
   .lead {
+    font-size: 20px;
     font-weight: 600;
+    color: $main-color;
   }
 }
 
@@ -49,28 +121,49 @@ $main-font-size: 18px;
   input {
     font-weight: 600;
     color: $main-color;
+    border-radius: 0;
+    border: 1px transparent solid;
+    background-color: $border-color;
+  }
+
+  input:focus {
+    background-color: $border-color;
   }
 
   input[type='radio'] {
     border: 1px solid #939393;
     border-radius: 100%;
+    background-color: transparent;
     -webkit-appearance: none;
-    width: 13px;
-    height: 13px;
+    width: 18px;
+    height: 18px;
     margin: 7px;
+    position: relative;
 
-    &:checked {
+    &:focus {
+      outline: none;
+    }
+
+    &:checked:after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
       background-color: #86edff;
     }
   }
 
   .col-form-label-left {
     text-align: left;
+    padding-left: 0;
   }
 }
 
 .form-control {
-  background-color: #dbdee4;
+  background-color: $border-color;
   color: $main-color;
   border: 1px transparent solid;
   min-height: 2.5em;
@@ -79,10 +172,10 @@ $main-font-size: 18px;
 }
 
 select.form-control {
-  -webkit-appearance: none;
   background-color: transparent;
-  border: 1px #dbdee4 solid;
+  border: 1px $border-color solid;
   border-radius: 0;
+  font-weight: 600;
 }
 
 .form-group-required {
@@ -90,4 +183,234 @@ select.form-control {
     content: '*';
     margin: 0 0.3rem;
   }
+}
+
+.form-check-inline {
+  text-align: left;
+  padding-left: 0 !important;
+}
+
+.intl-tel-input {
+  padding-left: 64px;
+
+  &.allow-dropdown input {
+    padding: 5px 15px!important;
+    margin-left: 15px !important;
+  }
+  .flag-container {
+    left: 0 !important;
+    width: 64px;
+    border: 1px solid $border-color;
+  }
+
+  .country-list .flag-box {
+    width: 34px !important;
+    margin: 10px;
+  }
+
+  .selected-flag {
+    width: 60px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .iti-arrow {
+    display: none;
+  }
+
+  .iti-flag {
+    transform: scale(1.7);
+  }
+}
+
+.via-page-dashboard-profile {
+  font-size: $main-font-size;
+  margin-top: 238px;
+
+  a {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+  .card {
+    background-color: transparent;
+  }
+
+  .jumbotron .hint {
+    font-size: 14px;
+    color: $hint-color;
+  }
+
+  .via-balance-current {
+    .jumbotron {
+      h1 {
+        text-transform: none;
+      }
+      h1:after {
+        content: 'You have:'
+      }
+    }
+  }
+  .via-balance-calculator {
+    .jumbotron {
+      h1 {
+        text-transform: none;
+      }
+      h1:after {
+        content: 'Calculate:'
+      }
+    }
+  }
+
+  .via-instruction {
+    .jumbotron {
+      h1:after {
+        content: 'Instruction:'
+      }
+    }
+  }
+}
+
+.via-header-wrapper-rightSide-profile {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.via-header-account {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+
+.via-header-account-email {
+  color: $link-color;
+  padding: 0 15px;
+}
+
+.btn.via-btn-logout {
+  border: 1px solid $link-color;
+  color: $link-color;
+  border-radius: 0;
+  padding: 5px 30px;
+  font-size: 16px;
+}
+
+.via-balance-calculator {
+  label {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .label-text {
+    position: relative;
+    top: 0.1em;
+  }
+}
+
+.via-balance-col {
+  position: relative;
+
+  .arrow-right {
+    position: absolute;
+    top: 60px;
+    right: -13px;
+  }
+}
+
+.via-balance-col-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.via-balance-card {
+  border: 0;
+  border-radius: 0;
+
+  .jumbotron {
+    padding: 10px !important;
+    height: 100%;
+  }
+}
+
+.via-balance-card-wrapper {
+  height: 100%;
+  box-shadow: 0 9px 6.6px 0.4px rgba(27, 29, 30, 0.1);
+  padding: 23px;
+}
+
+.via-balance-amount {
+  border: 1px solid $primary-color;
+  padding: 15px;
+  margin: 25px 0;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.via-balance-amount-number {
+  font-size: 38px;
+  font-weight: 500;
+  color: $main-color;
+}
+
+.via-balance-amount-currency {
+  font-size: $main-font-size;
+  color: $primary-color;
+  font-weight: 500;
+}
+
+.via-address {
+  text-align: left;
+  margin-bottom: 40px;
+
+  label {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 63px;
+  }
+}
+
+.via-address-field {
+  box-shadow: 0 5px 9.4px 0.6px rgba(27, 32, 34, 0.2);
+  border: 1px solid $primary-color;
+  margin-bottom: 20px;
+
+  input {
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    min-height: 61px;
+    line-height: 61px;
+    font-size: 20px;
+    padding-left: 15px;
+  }
+  .input-group-addon {
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
+
+.via-address-balance {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.25em;
+}
+
+.via-address-balance-value {
+  margin-left: 0.25em;
+  color: $primary-color;
+}
+
+.btn.via-btn-instructions {
+  border-radius: 0;
+  font-size: 22px;
+  line-height: 27px;
+  text-transform: uppercase;
+  border: 2px solid #ff1329;
+  padding: 15px 30px;
 }

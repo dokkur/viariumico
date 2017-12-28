@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackExcludeAssetsPlugin from 'html-webpack-exclude-assets-plugin';
 import postcssNext from 'postcss-cssnext';
 import postcssImport from 'postcss-import';
 import postcssExtend from 'postcss-extend';
@@ -97,7 +98,7 @@ module.exports = env => {
           use: extractStyles.extract({
             use: [
               {
-                loader: "css-loader",
+                loader: 'css-loader',
                 options: {
                   sourceMap: true
                 }
@@ -110,7 +111,7 @@ module.exports = env => {
                 }
               },
               {
-                loader: "sass-loader",
+                loader: 'sass-loader',
                 options: {
                   sourceMap: true
                 }
@@ -141,54 +142,60 @@ module.exports = env => {
 
     plugins: [
       new webpack.DefinePlugin({
-        LANG: JSON.stringify("ru")
+        LANG: JSON.stringify('ru')
       }),
 
       new webpack.optimize.CommonsChunkPlugin({
-        name: "common"
+        name: 'common'
       }),
 
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'pug/index.pug',
-        minfy: false
+        minify: false,
+        excludeAssets: [/dashboard\.(css|js)/]
       }),
 
       new HtmlWebpackPlugin({
         filename: 'ru/index.html',
         template: path.resolve(PATHS.views, 'ru/index.pug'),
-        minfy: false
+        minify: false,
+        excludeAssets: [/dashboard\.(css|js)/]
       }),
 
       new HtmlWebpackPlugin({
         filename: 'en/index.html',
         template: path.resolve(PATHS.views, 'en/index.pug'),
-        minfy: false
+        minify: false,
+        excludeAssets: [/dashboard\.(css|js)/]
       }),
 
       new HtmlWebpackPlugin({
         filename: 'jp/index.html',
         template: path.resolve(PATHS.views, 'jp/index.pug'),
-        minify: false
+        minify: false,
+        excludeAssets: [/dashboard\.(css|js)/]
       }),
 
       new HtmlWebpackPlugin({
-        filename: 'dashboard/login.html',
+        filename: 'dashboard/login/index.html',
         template: path.resolve(PATHS.views, 'dashboard/login.pug'),
         minify: false
       }),
 
       new HtmlWebpackPlugin({
-        filename: 'dashboard/registration.html',
+        filename: 'dashboard/registration/index.html',
         template: path.resolve(PATHS.views, 'dashboard/registration.pug'),
         minify: false
       }),
 
       new HtmlWebpackPlugin({
-        filename: 'dashboard/profile.html',
+        filename: 'dashboard/profile/index.html',
         template: path.resolve(PATHS.views, 'dashboard/profile.pug'),
         minify: false
       }),
+
+      new HtmlWebpackExcludeAssetsPlugin(),
 
       extractStyles,
 
@@ -200,8 +207,8 @@ module.exports = env => {
       ]),
 
       new BrowserSyncPlugin({
-        files: "dist/**/*.*",
-        hostname: "localhost",
+        files: 'dist/**/*.*',
+        hostname: 'localhost',
         port: 8080,
         server: { baseDir: ['dist'] },
         reloadDelay: 50,

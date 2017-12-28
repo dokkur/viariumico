@@ -11,7 +11,8 @@ html(lang="ru")
 
   body(class=bodyClasses)
     .via-page
-      include ../objects/header
+      block header
+        include ../objects/header
       .via-content
         block page-content
 

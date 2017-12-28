@@ -14,20 +14,24 @@ $(document).ready(function(){
     var langFromUrl = window.location.pathname.replace(/\//g,'');
     if (langFromUrl) {
       $('#langBtn').data('lang', langFromUrl);
-      var langLable = langItems.filter(function(lang) {
+      var firstLang = langItems.filter(function(lang) {
         return lang.code === langFromUrl
-      })[0].title;
-      $('#langBtn').text(langLable);
+      })[0];
+      if (firstLang) {
+        $('#langBtn').text(firstLang.title);
+      }
     }
   /**/
 
   /* language vars */
     if (langFromUrl) {
       var langVariables = config.translations[langFromUrl];
-      Object.keys(langVariables).forEach(function(langVariable) {
-        $('[data-bind="' + langVariable + '"]').html(langVariables[langVariable]);
-        $('[data-bindPlaceholder="' + langVariable + '"]').attr("placeholder", langVariables[langVariable]);
-      });
+      if (langVariables) {
+        Object.keys(langVariables).forEach(function(langVariable) {
+          $('[data-bind="' + langVariable + '"]').html(langVariables[langVariable]);
+          $('[data-bindPlaceholder="' + langVariable + '"]').attr("placeholder", langVariables[langVariable]);
+        });
+      }
     }
   /**/
 
