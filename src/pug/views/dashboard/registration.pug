@@ -4,7 +4,7 @@ block vars
   - var bodyClasses = 'registration';
 
 block head-extra
-  script(src='https://www.google.com/recaptcha/api.js', async='async', defer='defer')
+  script(src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit', async='async', defer='defer')
 
 block page-title
   title Registration
@@ -53,7 +53,7 @@ block page-content
               input(type='radio', name='china-or-us-resident', id='china-or-us-resident-no', value='no' checked='checked')
               | No
         .form-group.row
-          .offset-md-4.g-recaptcha(data-sitekey="6LeDy8kSAAAAAALG4TXyIfUYO9ZovSIfhfSsVLie")
+          .offset-md-4.recaptcha
         .form-group.row
           .offset-md-4
             button.btn.btn-primary.btn-lg(type="submit") Open My Account Now

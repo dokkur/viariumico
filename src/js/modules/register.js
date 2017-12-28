@@ -10,6 +10,11 @@ import 'intl-tel-input/build/css/intlTelInput.css';
 
 import $ from 'jquery';
 
+window.onRecaptchaLoad = () => {
+  console.log(RECAPTCHA_KEY);
+  grecaptcha.render($('.recaptcha').get(0), {sitekey: RECAPTCHA_KEY});
+};
+
 export default function register() {
   const countryData = $.fn.intlTelInput.getCountryData();
   const $phoneInput = $('#phone');

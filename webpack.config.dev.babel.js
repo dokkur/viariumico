@@ -142,7 +142,8 @@ module.exports = env => {
 
     plugins: [
       new webpack.DefinePlugin({
-        LANG: JSON.stringify('ru')
+        LANG: JSON.stringify('ru'),
+        RECAPTCHA_KEY: JSON.stringify('6LeDy8kSAAAAAALG4TXyIfUYO9ZovSIfhfSsVLie')
       }),
 
       new webpack.optimize.CommonsChunkPlugin({

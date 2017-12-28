@@ -4,7 +4,7 @@ block vars
   - var bodyClasses = 'login';
 
 block head-extra
-  script(src='https://www.google.com/recaptcha/api.js', async='async', defer='defer')
+  script(src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit', async='async', defer='defer')
 
 block page-title
   title Login
@@ -26,6 +26,6 @@ block page-content
           label.col-form-label.col-md-4(for='password', title='Password is required') Password
           input.form-control.form-control-lg.col-md-8(type='password', name='password', id='password', required='required', size='40', title='Please fill in password')
         .form-group.row
-          .offset-md-4.g-recaptcha(data-sitekey="6LeDy8kSAAAAAALG4TXyIfUYO9ZovSIfhfSsVLie")
+          .offset-md-4.recaptcha
         .row.offset-md-4
           button.btn.btn-primary.btn-lg(type="submit") Login

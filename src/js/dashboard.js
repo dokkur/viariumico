@@ -11,4 +11,7 @@ import $ from 'jquery';
 import register from './modules/register';
 import profile from './modules/profile';
 
-$(document).ready(() => { register(); profile(); });
+$(document).ready(() => {
+  register();
+  profile();
+});
