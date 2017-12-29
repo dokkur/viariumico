@@ -198,12 +198,14 @@ module.exports = env => {
 
       new HtmlWebpackPlugin({
         template: 'pug/index.pug',
-        excludeAssets: [/dashboard\.(css|js)/]
+        excludeAssets: [/dashboard\.(css|js)/],
+        minify: false
       }),
 
       new HtmlWebpackPlugin({
         filename: 'dashboard/login/index.html',
         template: path.resolve(PATHS.views, 'dashboard/login.pug'),
+        minify: false
       }),
 
       new HtmlWebpackPlugin({
