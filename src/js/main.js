@@ -11,16 +11,15 @@ import config from "../../config.json";
 $(document).ready(function() {
 
   /* actual language */
-  var langItems = [{code: 'en', title: 'ENG', link: '/en'}, {code: 'ru', title: 'RUS', link: '/ru'}, {
-    code: 'jp',
-    title: 'JPN',
-    link: '/jp'
-  }];
-  var langFromUrl = window.location.pathname.replace(/\//g, '');
-  if (langFromUrl) {
-    $('#langBtn').data('lang', langFromUrl);
+  var langItems = [
+    {code: 'en', title: 'ENG', link: '/en'},
+    {code: 'ru', title: 'RUS', link: '/ru'},
+    {code: 'jp', title: 'JPN', link: '/jp'}];
+  var langFromHtmlTag = $('html').attr('lang');
+  if (langFromHtmlTag) {
+    $('#langBtn').data('lang', langFromHtmlTag);
     var firstLang = langItems.filter(function(lang) {
-      return lang.code === langFromUrl
+      return lang.code === langFromHtmlTag
     })[0];
     if (firstLang) {
       $('#langBtn').text(firstLang.title);
@@ -29,8 +28,8 @@ $(document).ready(function() {
   /**/
 
   /* language vars */
-  if (langFromUrl) {
-    var langVariables = config.translations[langFromUrl];
+  if (langFromHtmlTag) {
+    var langVariables = config.translations[langFromHtmlTag];
     if (langVariables) {
       Object.keys(langVariables).forEach(function(langVariable) {
         $('[data-bind="' + langVariable + '"]').html(langVariables[langVariable]);
@@ -126,16 +125,27 @@ $(document).ready(function() {
       type: "POST",
       url: "/create_request",
       data: form,
-      success: function() {
-        bootbox.alert({
-          title: langVariables.popUpSuccess,
-          message: langVariables.popUpSuccessDesc,
-          backdrop: true,
-          callback: function() {
-            console.log('succes');
-            $('#feedbackForm').find("#email").val('');
-          }
-        });
+      success:  function (data) {
+        if (data['succes'] === true) {
+          bootbox.alert({
+            title: langVariables.successTitle,
+            message: langVariables.successMessage,
+            backdrop: true,
+            callback: function () {
+              console.log('succes');
+              $('#feedbackForm').find("#email").val('');
+            }
+          });
+        } else {
+          bootbox.alert({
+            title: "Error",
+            message: data['errors'],
+            backdrop: true,
+            callback: function () {
+              console.log('server error');
+            }
+          });
+        }
       },
       error: function() {
         bootbox.alert({
@@ -186,16 +196,27 @@ $(document).ready(function() {
         type: "POST",
         url: "/create_request",
         data: form,
-        success: function() {
-          bootbox.alert({
-            title: langVariables.popUpSuccess,
-            message: langVariables.popUpSuccessDesc,
-            backdrop: true,
-            callback: function() {
-              console.log('succes');
-              $('#feedbackForm').find("#email").val('');
-            }
-          });
+        success:  function (data) {
+          if (data['succes'] === true) {
+            bootbox.alert({
+              title: langVariables.successTitle,
+              message: langVariables.successMessage,
+              backdrop: true,
+              callback: function () {
+                console.log('succes');
+                $('#feedbackForm').find("#email").val('');
+              }
+            });
+          } else {
+            bootbox.alert({
+              title: "Error",
+              message: data['errors'],
+              backdrop: true,
+              callback: function () {
+                console.log('server error');
+              }
+            });
+          }
         },
         error: function() {
           bootbox.alert({
@@ -246,16 +267,27 @@ $(document).ready(function() {
         type: "POST",
         url: "/create_request",
         data: form,
-        success: function() {
-          bootbox.alert({
-            title: langVariables.popUpSuccess,
-            message: langVariables.popUpSuccessDesc,
-            backdrop: true,
-            callback: function() {
-              console.log('succes');
-              $('#feedbackForm').find("#email").val('');
-            }
-          });
+        success:  function (data) {
+          if (data['succes'] === true) {
+            bootbox.alert({
+              title: langVariables.successTitle,
+              message: langVariables.successMessage,
+              backdrop: true,
+              callback: function () {
+                console.log('succes');
+                $('#feedbackForm').find("#email").val('');
+              }
+            });
+          } else {
+            bootbox.alert({
+              title: "Error",
+              message: data['errors'],
+              backdrop: true,
+              callback: function () {
+                console.log('server error');
+              }
+            });
+          }
         },
         error: function() {
           bootbox.alert({

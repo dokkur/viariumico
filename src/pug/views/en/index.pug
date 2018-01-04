@@ -1,4 +1,6 @@
 extends ../../layout/base
+block variables
+  - var lang = 'en'
 
 block page-title
   title Viarium — United infrastructure in VR for business and entertainment
@@ -32,7 +34,7 @@ block page-content
         .via-feedbackBlock-feedbackLine
           input.email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес" data-bindPlaceholder='typeEmail')
           button.via-btn.-fullColor(type="submit") Get WP
-  
+
   #partners.via-page-partners
     .container
       h1 Partners
@@ -42,7 +44,7 @@ block page-content
           .via-page-partners-wrap-bg
             img(src="/my_assets/images/partners/partnersBg.png")
           .via-page-partners-wrap
-            .via-page-partners-wrap-outer 
+            .via-page-partners-wrap-outer
               .via-page-partners-wrap-outer-logo
                 a(href='#' target='_blank').via-page-partners-wrap-outer-logo-inner
                   img(src="/my_assets/images/partners/ozon.png")
@@ -51,7 +53,7 @@ block page-content
           .via-page-partners-wrap-bg
             img(src="/my_assets/images/partners/partnersBg2.png")
           .via-page-partners-wrap
-            .via-page-partners-wrap-outer 
+            .via-page-partners-wrap-outer
               .via-page-partners-wrap-outer-logo
                 a(href='#' target='_blank').via-page-partners-wrap-outer-logo-inner
                   img(src="/my_assets/images/partners/lenovo.png")
@@ -60,7 +62,7 @@ block page-content
           .via-page-partners-wrap-bg
             img(src="/my_assets/images/partners/partnersBg3.png")
           .via-page-partners-wrap
-            .via-page-partners-wrap-outer 
+            .via-page-partners-wrap-outer
               .via-page-partners-wrap-outer-logo
                 a(href='#' target='_blank').via-page-partners-wrap-outer-logo-inner
                   img(src="/my_assets/images/partners/microsoft.png")
@@ -103,7 +105,7 @@ block page-content
               p We decided to ask the co-founder of a new project, where the idea came from and where it all began. - Hello, Alexey ...
               a.via-page-smi-wrap-desc-link(href='#') Read the article
         .clear
-  
+
   #aboutToken.via-page-aboutToken
     .container
       h1 Token information
@@ -199,7 +201,7 @@ block page-content
             input.email.via-feedbackBlock-feedbackLine-input(type="email" name="request[email]" placeholder="Введите ваш E-mail адрес")
             button.via-btn.-fullColor(type="submit") Get WP
       button.getWP.via-btn.-fullColor.-mobileVisible(type="submit") Get WP
-  
+
   #advantages.via-page-advantages
     .container
       h1 Our advantages
@@ -247,7 +249,7 @@ block page-content
               img(src="/my_assets/images/advantages/adv8.png")
             p The world grows unlimitedly
         .clear
-          
+
   #documents.via-page-documents
     .container
       h1 Documentation
