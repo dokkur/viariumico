@@ -6,13 +6,14 @@
  */
 
 import 'intl-tel-input';
+import 'intl-tel-input/build/js/utils'
 import 'intl-tel-input/build/css/intlTelInput.css';
 
 import $ from 'jquery';
 
-window.onRecaptchaLoad = () => {
-  window.grecaptcha.render($('.recaptcha').get(0), {sitekey: RECAPTCHA_KEY});
-};
+// window.onRecaptchaLoad = () => {
+//   window.grecaptcha.render($('.recaptcha').get(0), {sitekey: RECAPTCHA_KEY});
+// };
 
 export default function register() {
   const countryData = $.fn.intlTelInput.getCountryData();
@@ -29,6 +30,10 @@ export default function register() {
   $countryDropDown.change(function() {
     $phoneInput.intlTelInput('setCountry', $(this).val());
   });
+  $phoneInput.intlTelInput({
+    hiddenInput: 'phone',
+    autoPlaceholder: 'polite'
+  });
 
-  $phoneInput.intlTelInput();
+  $countryDropDown.change();
 }

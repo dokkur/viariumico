@@ -10,12 +10,12 @@ html(lang=lang)
   block vars
     - var wrapperClasses = '';
 
-  body(class=wrapperClasses)
-    div.via-page
+  body
+    div(class="via-page " + wrapperClasses)
       block header
-        include ../objects/header
+        //include ../objects/header
       .via-content
         block page-content
 
       include ../objects/footer
-    include ../modals/main
+    //include ../modals/main

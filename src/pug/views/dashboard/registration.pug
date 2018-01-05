@@ -1,7 +1,7 @@
-extends ../../layout/base
+extends ../../layout/base_profile
 
 block vars
-  - var bodyClasses = 'registration';
+  - var wrapperClasses = 'registration';
 
 block head-extra
   script(src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit', async='async', defer='defer')
@@ -33,7 +33,7 @@ block page-content
           select.form-control.form-control-lg.col-md-8(name='country', id='country', autocomplete='shipping country')
         .form-group.row
           label.col-form-label.col-md-4(for='phone') Phone Number (Optional)
-          input.form-control.form-control-lg.col-md-8(type='tel', name='phone', id='phone', autocomplete='tel', placeholder='(421) 000-00-00')
+          input.form-control.form-control-lg.col-md-8(type='tel', name='phone', id='phone', autocomplete='tel')
         .form-group.row
           label.col-form-label.col-form-label-left.offset-md-4.col-md-8(for='politically-exposed-yes') Are you, or have you ever been, a Politically Exposed Person?*
           .form-check-inline.offset-md-4.col-md-8

@@ -9,6 +9,7 @@ import postcssExtend from 'postcss-extend';
 import postcssReporter from 'postcss-reporter';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
 import HtmlWebpackExcludeAssetsPlugin from 'html-webpack-exclude-assets-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
@@ -151,7 +152,7 @@ module.exports = env => {
             {
               loader: 'file-loader',
               options: {
-                name: 'assets/[name].[ext]'
+                name: 'my_assets/[name].[ext]'
               }
             },
             {
@@ -189,7 +190,7 @@ module.exports = env => {
     plugins: [
       new webpack.DefinePlugin({
         LANG: JSON.stringify('en'),
-        RECAPTCHA_KEY: JSON.stringify('6LfGYz4UAAAAALRZ6AQXwpnMkkO0XC6zrUNhZXgH')
+        RECAPTCHA_KEY: JSON.stringify('6LehUz8UAAAAAAsd3PdAh6mYg5gWdGVfcw7_PSI0')
       }),
 
       new webpack.optimize.CommonsChunkPlugin({
@@ -223,6 +224,13 @@ module.exports = env => {
       new HtmlWebpackExcludeAssetsPlugin(),
 
       extractStyles,
+
+      new CopyWebpackPlugin([
+        {
+          from: PATHS.static,
+          to: PATHS.dist
+        }
+      ]),
 
       new StyleLintPlugin({
         configFile: '.stylelintrc',
