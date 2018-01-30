@@ -7,6 +7,7 @@ import bootbox from "bootbox";
 import moment from "moment";
 import countdown from "jquery-countdown";
 import config from "../../config.json";
+import {trackEvent} from './modules/shared/trackers';
 
 $(document).ready(function() {
 
@@ -119,6 +120,7 @@ $(document).ready(function() {
           console.log('email is empty');
         }
       });
+      trackEvent('wp_main');
       return false;
     }
     $.ajax({
@@ -247,6 +249,10 @@ $(document).ready(function() {
     });
     getWpPopUp.find('.bootbox-body').html($('#getWpPopUp').clone());
 
+    getWpPopUp.find('button[type="submit"]').click(function() {
+      trackEvent('wp_popup');
+    });
+
     /* send Buy token form */
     $(getWpPopUp).find('form').submit(function(event) {
       event.preventDefault();
@@ -307,6 +313,13 @@ $(document).ready(function() {
   /**/
   /**/
 
+  /* profile links */
+  $('.profile-links').click(function(event) {
+    if ($(event.currentTarget).attr('href').indexOf('sign_up') > 0) {
+      trackEvent('sign_up');
+    }
+  });
+
   /* play video onclick */
   $('video').on('touchstart click', function(e) {
     e.preventDefault();
@@ -324,6 +337,41 @@ $(document).ready(function() {
   var video = $('video');
   video.on('ended', function(e) {
     video.get(0).load();
+  });
+  /**/
+
+  /* footer social links */
+  const socialMatchToActionNameMap = {
+    facebook: 'fb',
+    instagram: 'instagram',
+    twitter: 'twitter',
+    medium: 'medium',
+    vk: 'vkontakte'
+  };
+  $('.via-social a').click((event) => {
+    const $item = $(event.currentTarget);
+    const href = $item.attr('href');
+    if ($.type(href) === 'string' && href) {
+      for (let social in socialMatchToActionNameMap) {
+        if (href.indexOf(social) > 0) {
+          trackEvent(socialMatchToActionNameMap[social]);
+        }
+      }
+    }
+  });
+  /**/
+
+  /* document links */
+  $('.via-page-documents-wrap').click((event) => {
+    const $item = $(event.currentTarget);
+    const id = $item.attr('id');
+    if ($.type(id) === 'string' && id) {
+      const idSplits = id.split('-');
+      if (idSplits.length) {
+        const action = idSplits[idSplits.length - 1];
+        trackEvent(action);
+      }
+    }
   });
   /**/
 });
