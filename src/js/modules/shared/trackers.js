@@ -6,7 +6,7 @@
  */
 
 
-/* globals ga, Ya */
+/* globals ga, gtag, Ya */
 
 const DEFAULT_LABEL = 'Main Campaign';
 
@@ -18,14 +18,22 @@ const DEFAULT_LABEL = 'Main Campaign';
  * @returns void
  *
  * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+ * @see https://developers.google.com/analytics/devguides/collection/gtagjs/events
  */
 export function gaTrackEvent(action) {
-  if ('ga' in window) {
-    const category = 'UX';
+  const categoryName = 'UX';
+  if ('gtag' in window) {
+    console.debug('Will track Google Analytics event', categoryName, action, DEFAULT_LABEL);
 
-    console.debug('Will track Google Analytics event', category, action, DEFAULT_LABEL);
+    gtag('event', action, {
+      event_category: categoryName,
+      event_label: DEFAULT_LABEL
+    });
+  }
+  else if ('ga' in window) {
+    console.debug('Will track Google Analytics event', categoryName, action, DEFAULT_LABEL);
 
-    ga('send', 'event', category, action, DEFAULT_LABEL);
+    ga('send', 'event', categoryName, action, DEFAULT_LABEL);
   }
 }
 
