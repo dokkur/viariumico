@@ -361,6 +361,8 @@ select.form-control {
   font-size: 38px;
   font-weight: 500;
   color: $main-color;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .via-balance-amount-currency {
